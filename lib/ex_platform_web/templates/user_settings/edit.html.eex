@@ -1,0 +1,118 @@
+<div class="flex-1 h-full bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+
+<div class="container mx-auto">
+<div class="space-y-8 divide-y divide-gray-200">
+  <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+  <%= if @password_changeset.action do %>
+    <p class="text-white bg-red-500 p-3 text-sm font-medium rounded-md">
+      <%= dgettext("errors", "Oops, something went wrong! Please check the errors below.") %>
+    </p>
+  <% end %>
+  <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5 pb-5">
+    <div class="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900">Settings</h3>
+
+        <p class="mt-1 max-w-2xl text-sm text-gray-500">
+          <%= gettext("Change your personal details here") %>
+        </p>
+      </div>
+      <div class="space-y-6 sm:space-y-5 divide-y divide-gray-200">
+        <div class="pt-6 sm:pt-5">
+          <div role="group" aria-labelledby="label-email">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+              <div>
+                <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-email">
+                  <%= gettext("Change your Email") %>
+                </div>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:col-span-2">
+                <p class="text-sm text-gray-500 mb-5">
+                    <%= gettext("You need to enter your password to change your email.") %>
+                  <%= link gettext("Forgot your password?"), to: Routes.user_reset_password_path(@conn, :new),
+                                      class: "font-medium text-indigo-400 hover:text-indigo-500" %>
+
+                </p>
+                <div class="max-w-lg space-y-4">
+                  <%= form_for @email_changeset, Routes.user_settings_path(@conn, :update), fn f -> %>
+                    <div class="relative flex items-start">
+                      <div>
+
+                        <%= hidden_input f, :action, name: "action", value: "update_email" %>
+
+                        <%= label f, :email, gettext("Email"), class: "block text-sm font-medium text-gray-700" %>
+                        <%= email_input f, :email, required: true, class: "input", placeholder: gettext("Email") %>
+                        <%= error_tag f, :email %>
+                      </div>
+                      <div class="ml-3 text-sm">
+                          <%= label f, :current_password, gettext("Current Password"),
+                                for: "current_password_for_email",
+                                class: "block text-sm font-medium text-gray-700" %>
+                          <%= password_input f, :current_password,
+                              required: true,
+                              name: "current_password",
+                              id: "current_password_for_email", class: "input",
+                              title: gettext("Current Password")
+                              %>
+                          <%= error_tag f, :current_password %>
+                      </div>
+                    </div>
+                    <%= submit gettext("Change email"), class: 'btn-primary mt-5' %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 sm:pt-5">
+          <div role="group" aria-labelledby="label-notifications">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+              <div>
+                <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-notifications">
+                  <%= gettext("Change password") %>
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <div class="max-w-lg">
+                  <p class="text-sm text-gray-500 mb-3"><%= gettext("Create a new password.") %></p>
+                  <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update), fn f -> %>
+                      <div class="relative flex items-start">
+                        <%= hidden_input f, :action, name: "action", value: "update_password" %>
+
+                        <div>
+                          <%= label f, :password, gettext("New password"),
+                              class: "block text-sm font-medium text-gray-700" %>
+                          <%= password_input f, :password, required: true, class: "input" %>
+                          <%= error_tag f, :password %>
+
+                          <div class="mt-3">
+                            <%= label f, :password_confirmation, gettext("Confirm new password"),
+                                class: "block text-sm font-medium text-gray-700" %>
+                            <%= password_input f, :password_confirmation, required: true, class: "input" %>
+                            <%= error_tag f, :password_confirmation %>
+                          </div>
+                        </div>
+
+                        <div class="ml-3">
+                          <%= label f, :current_password, gettext("Current Password"), for: "current_password_for_password",
+                                class: "block text-sm font-medium text-gray-700" %>
+                          <%= password_input f, :current_password, required: true,
+                            name: "current_password", id: "current_password_for_password",
+                            class: "input" %>
+                          <%= error_tag f, :current_password %>
+                        </div>
+                    </div>
+                    <%= submit gettext("Change password"), class: "btn-primary mt-5" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>

@@ -24,6 +24,7 @@ defmodule ExPlatformWeb do
       import Plug.Conn
       import ExPlatformWeb.Gettext
       alias ExPlatformWeb.Router.Helpers, as: Routes
+      use ExPlatform.Controller
     end
   end
 

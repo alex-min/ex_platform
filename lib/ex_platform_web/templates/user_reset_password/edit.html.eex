@@ -1,0 +1,79 @@
+<%= form_for @changeset, Routes.user_reset_password_path(@conn, :update, @token),
+ [class: 'flex flex-col flex-1'],
+fn f -> %>
+
+
+  <%= if @changeset.action do %>
+    <%= render LayoutView, "_notification.html",
+              text: dgettext("errors", "Oops, something went wrong! Please check the errors below."),
+              type: :error %>
+  <% end %>
+
+<div class="flex-1 h-full bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img class="mx-auto h-12 w-auto" src="/images/logo.png" alt="Workflow">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900"><%= gettext("Reset password") %></h2>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">
+            <%= label f, :password, gettext("New password") %>
+          </label>
+          <div class="mt-1">
+            <%= password_input f, :password, required: true,
+              placeholder: gettext("Password"),
+              class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md
+                      shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500
+                      focus:border-indigo-500 sm:text-sm"  %>
+          </div>
+          <%= error_tag f, :password %>
+        </div>
+
+        <div class="mt-5">
+          <label for="password" class="block text-sm font-medium text-gray-700">
+            <%= label f, :password_confirmation, gettext("Confirm new password") %>
+          </label>
+          <div class="mt-1">
+            <%= password_input f, :password_confirmation, required: true,
+              placeholder: gettext("Password"),
+              class: "appearance-none block w-full px-3 py-2 border border-gray-300
+                      rounded-md shadow-sm placeholder-gray-400 focus:outline-none
+                      focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  %>
+          </div>
+          <%= error_tag f, :password_confirmation %>
+        </div>
+
+        <div>
+          <%= submit gettext("Reset password"),
+              class: "w-full btn-primary mt-5" %>
+        </div>
+
+      <div class="mt-6">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-2 bg-white text-gray-500">
+              <%= gettext("Or") %>
+            </span>
+          </div>
+        </div>
+
+        <div class="mt-6 flex justify-center grid grid-cols-2 gap-3">
+          <div>
+           <%= link gettext("Sign-in to your account"), to: Routes.user_session_path(@conn, :new),
+                class: "block font-medium text-center text-indigo-400 hover:text-indigo-500" %>
+          </div>
+          <div>
+           <%= link gettext("Create an account"), to: Routes.user_registration_path(@conn, :new),
+                class: "block font-medium text-center text-indigo-400 hover:text-indigo-500" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

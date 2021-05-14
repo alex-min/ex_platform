@@ -1,0 +1,8 @@
+<%= @email.title %>.
+
+<%= @email.top_text %>
+
+<%= @email.link_to %>
+
+=======
+<%= @email.bottom_text %>

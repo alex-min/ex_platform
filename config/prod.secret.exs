@@ -23,6 +23,15 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
+smtp_email_address =
+  System.get_env("SMTP_EMAIL_ADDRESS") ||
+    raise """
+      environment variable SMTP_EMAIL_ADDRESS is missing
+      For example "hello@example.com"
+    """
+
+config :ex_platform, ExPlatform.Mailer, smtp_email_address: smtp_email_address
+
 config :ex_platform, ExPlatformWeb.Endpoint,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),

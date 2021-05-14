@@ -5,6 +5,16 @@ defmodule ExPlatformWeb.ErrorHelpers do
 
   use Phoenix.HTML
 
+  @spec get_errors(Ecto.Changeset.t()) :: %{atom() => [binary]}
+  @doc """
+  outputs the errors from an ecto changeset
+  """
+  def get_errors(changeset) do
+    Ecto.Changeset.traverse_errors(changeset, fn error ->
+      translate_error(error)
+    end)
+  end
+
   @doc """
   Generates tag for inlined form input errors.
   """

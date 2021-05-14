@@ -1,5 +1,8 @@
 use Mix.Config
 
+# Only in tests, remove the complexity from the password hashing algorithm
+config :bcrypt_elixir, :log_rounds, 1
+
 # Configure your database
 #
 # The MIX_TEST_PARTITION environment variable can be used
@@ -20,3 +23,6 @@ config :ex_platform, ExPlatformWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.TestAdapter
+config :ex_platform, ExPlatform.Mailer, smtp_email_address: "hello@example.com"

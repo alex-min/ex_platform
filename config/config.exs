@@ -7,6 +7,14 @@
 # General application configuration
 use Mix.Config
 
+config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.LocalAdapter
+
+config :ex_platform, ExPlatformWeb.Cldr,
+  default_locale: "en",
+  locales: ["fr", "en"],
+  gettext: ExPlatformWeb.Gettext,
+  data_dir: "./priv/cldr"
+
 config :ex_platform,
   ecto_repos: [ExPlatform.Repo]
 

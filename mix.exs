@@ -20,7 +20,7 @@ defmodule ExPlatform.MixProject do
   def application do
     [
       mod: {ExPlatform.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :bamboo]
     ]
   end
 
@@ -33,20 +33,29 @@ defmodule ExPlatform.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bamboo, "~> 2.0"},
+      {:bamboo_phoenix, "~> 1.0.0"},
+      {:bcrypt_elixir, "~> 2.0"},
+      {:phx_gen_auth, "~> 0.7", only: [:dev], runtime: false},
       {:phoenix, "~> 1.5.9"},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_live_view, "~> 0.15.1"},
-      {:floki, ">= 0.30.0", only: :test},
+      {:floki, ">= 0.19.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_dashboard, "~> 0.4"},
+      {:premailex, "~> 0.3.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:ex_cldr, "~> 2.0"},
+      {:ex_money, "~> 5.5.1"},
+      {:ex_cldr_dates_times, "~> 2.6"},
+      {:ex_cldr_calendars, "~> 1.12"}
     ]
   end
 
