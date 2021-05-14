@@ -1,7 +1,7 @@
 <%= if @text do %>
 <div>
 <div class="my-2 inset-x-0">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 xyz-in xyz-left-5">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 animate__animated animate__backInRight">
     <div class="p-2 rounded-lg <%= if @type == :error, do: "bg-red-600", else: "bg-indigo-600"  %> shadow-lg sm:p-3">
       <div class="flex items-center justify-between flex-wrap">
         <div class="w-0 flex-1 flex items-center">
@@ -17,12 +17,12 @@
         </div>
         <%= if assigns[:dismiss] != false  do %>
         <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2"
-             phx-click="clear-flash:text"
+             phx-click="lv:clear-flash"
              phx-value-key="<%= Atom.to_string(@type) %>"
-             phx-hook="Autoclear"
+             phx-hook="AutoClearNotification"
              id="notification-<%= Atom.to_string(@type) %>">
           <button type="button"
-                  class="-mr-1 flex p-2 rounded-md hover:bg-<%= if @type == :error, do: "red", else: "indigo"  %>-500 focus:outline-none focus:ring-2 focus:ring-white">
+                  class="-mr-1 flex p-2 rounded-md <%= if @type == :error, do: "hover:bg-red-500", else: "hover:bg-indigo-500"  %> focus:outline-none focus:ring-2 focus:ring-white">
             <span class="sr-only"><%= gettext("Dismiss") %></span>
             <!-- Heroicon name: x -->
             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

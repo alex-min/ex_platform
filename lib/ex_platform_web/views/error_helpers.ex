@@ -21,7 +21,7 @@ defmodule ExPlatformWeb.ErrorHelpers do
   def error_tag(form, field) do
     Enum.map(Keyword.get_values(form.errors, field), fn error ->
       content_tag(:span, translate_error(error),
-        class: "invalid-feedback",
+        class: "my-2 text-red-500 text-sm font-medium",
         phx_feedback_for: input_name(form, field)
       )
     end)

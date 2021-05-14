@@ -1,11 +1,8 @@
-<main role="main" class="container">
-  <p class="alert alert-info" role="alert"
-    phx-click="lv:clear-flash"
-    phx-value-key="info"><%= live_flash(@flash, :info) %></p>
-
-  <p class="alert alert-danger" role="alert"
-    phx-click="lv:clear-flash"
-    phx-value-key="error"><%= live_flash(@flash, :error) %></p>
+<main role="main" class="flex-1 flex flex-col">
+  <div class="absolute top-0 right-0 z-20" style="width:700px; max-height: 500px">
+    <%= render "_notification.html", text:  live_flash(@flash, :info), type: :info %>
+    <%= render "_notification.html", text: live_flash(@flash, :error), type: :error %>
+  </div>
 
   <%= @inner_content %>
 </main>

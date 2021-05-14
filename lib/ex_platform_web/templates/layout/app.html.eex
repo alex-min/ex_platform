@@ -1,5 +1,6 @@
-<main role="main" class="container">
-  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+<%= render "_notification.html", text:  get_flash(@conn, :info), type: :info, dismiss: false %>
+<%= render "_notification.html", text: get_flash(@conn, :error), type: :error, dismiss: false %>
+
+<main role="main" class="flex-1 flex flex-col">
   <%= @inner_content %>
 </main>
