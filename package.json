@@ -21,7 +21,7 @@
     "roots": [
       "testjs"
     ],
-    "testMatch": ["../**/*.test.js"],
+    "testMatch": ["./**/*.test.js"],
     "moduleDirectories": [
       "node_modules"
     ],

@@ -1,6 +1,5 @@
 const path = require('path');
 const glob = require('glob');
-//const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -9,6 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = (_env, options) => {
   const devMode = options.mode !== 'production';
 
+
+  console.log(path.resolve(__dirname, './priv/static/css/app.css'))
   return {
     optimization: {
       minimizer: [
@@ -17,11 +18,11 @@ module.exports = (_env, options) => {
       ]
     },
     entry: {
-      'app': glob.sync('./vendor/**/*.js').concat(['./js/app.js'])
+      'app': glob.sync('./assets/vendor/**/*.js').concat(['./assets/js/app.js'])
     },
     output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, '../priv/static/js'),
+      path: path.resolve(__dirname, './priv/static/js'),
       publicPath: '/js/'
     },
     devtool: devMode ? 'eval-cheap-module-source-map' : undefined,
@@ -54,8 +55,8 @@ module.exports = (_env, options) => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({ filename: '../css/app.css' }),
-      new CopyWebpackPlugin({patterns: [{ from: 'static/', to: '../' }]})
+      new MiniCssExtractPlugin({ filename:  '../css/app.css' }),
+      new CopyWebpackPlugin({patterns: [{ from: 'assets/static/', to: './' }]})
     ]
   }
 };

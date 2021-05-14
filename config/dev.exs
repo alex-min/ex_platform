@@ -30,7 +30,7 @@ config :ex_platform, ExPlatformWeb.Endpoint,
       "development",
       "--watch",
       "--watch-options-stdin",
-      cd: Path.expand("../assets", __DIR__)
+      cd: Path.expand("../", __DIR__)
     ]
   ]
 
