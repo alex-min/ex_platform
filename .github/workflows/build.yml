@@ -61,5 +61,3 @@ jobs:
           mix deps.get
       - name: Run tests
         run: mix test
-      - name: Run js tests
-        run: mix testjs
