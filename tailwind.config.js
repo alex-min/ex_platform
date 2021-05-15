@@ -1,7 +1,9 @@
-const path = require('path');
+/* eslint-env node */
+
+const path = require("path");
 
 module.exports = {
-    mode: 'jit',
+    mode: "jit",
     purge:  [
         path.resolve(__dirname, "./lib/**/*.html.eex"),
         path.resolve(__dirname, "./lib/**/*.html.leex"),
@@ -14,4 +16,4 @@ module.exports = {
     },
     variants: {},
     plugins: [],
-}
+};

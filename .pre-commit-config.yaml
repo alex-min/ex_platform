@@ -19,3 +19,10 @@ repos:
         entry: mix dialyzer
         files: \.(ex|exs)$
         require_serial: true
+    -   id: eslint
+        name: ESLint
+        language: system
+        entry: yarn run -s eslint
+        args:
+          - --fix
+        files: \.(js|jsx|ts|tsx)$
