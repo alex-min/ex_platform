@@ -67,12 +67,9 @@ jobs:
           mix deps.get
       - name: Install dependencies
         run: yarn
-      - name: Elixir code quality
-        run: mix credo
       - name: PLT cache
         uses: actions/cache@v2
         with:
           path: priv/plts
           key: ${{ runner.os }}-plts-${{ hashFiles('.tool-versions') }}
-      - name: Elixir Dializer
-        run: mix dialyzer
+      - uses: pre-commit/action@v2.0.0
