@@ -35,3 +35,6 @@ node_modules
 
 # dializer config files
 priv/plts
+
+# temp python virtual env
+venv

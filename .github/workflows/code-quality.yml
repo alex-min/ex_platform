@@ -77,12 +77,17 @@ jobs:
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('.tool-versions') }}
-      - name: pre-commit bin cache
+      - name venv cache
         uses: actions/cache@v2
         with:
-          path: ~/.local/bin/
-          key: ${{ runner.os }}-precommit-bin-${{ hashFiles('.tool-versions') }}
+          path: venv
+          key: ${{ runner.os }}-venv-${{ hashFiles('.tool-versions') }}
       - name: Install pre-commit
         run: pip install pre-commit
       - name: Pre-commit checks
-        run: ~/bin/pre-commit run --all-files
+        run: |
+          python -m venv venv
+          venv/bin/pip install pre-commit
+          venv/bin/pre-commit install-hooks --config .pre-commit-config.yaml
+          venv/bin/pre-commit run --all-files
+
