@@ -1,0 +1,11 @@
+version = 1
+
+[merge]
+automerge_label = "dependencies"
+
+[merge.automerge_dependencies]
+versions = ["minor", "patch", "major"]
+usernames = ["dependabot"]
+
+[approve]
+auto_approve_usernames = ["dependabot"]
