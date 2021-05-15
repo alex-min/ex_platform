@@ -35,7 +35,18 @@ jobs:
           echo "$ASDF_DIR/bin" >> $GITHUB_PATH
           echo "$ASDF_DIR/shims" >> $GITHUB_PATH
           $ASDF_DIR/bin/asdf reshim
-      - name: Restore dependencies cache
+      - name: Restore mix dependencies cache
+        uses: actions/cache@v2
+        with:
+          path: deps
+          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          restore-keys: ${{ runner.os }}-mix-
+      - name: Install mix dependencies
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+      - name: Restore yarn dependencies cache
         uses: actions/cache@v2
         with:
           path: node_modules
