@@ -8,8 +8,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = (_env, options) => {
   const devMode = options.mode !== 'production';
 
-
-  console.log(path.resolve(__dirname, './priv/static/css/app.css'))
   return {
     optimization: {
       minimizer: [

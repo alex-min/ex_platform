@@ -1,3 +1,5 @@
 module.exports = {
-    testEnvironment: 'jest-environment-node',
+    resolver: require.resolve(`jest-pnp-resolver`),
+    testEnvironment: 'jsdom',
+    globalSetup: "./testjs/setup-tests.js"
 };
