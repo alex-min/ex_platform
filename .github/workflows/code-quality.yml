@@ -78,5 +78,5 @@ jobs:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('.tool-versions') }}
         run: pip install pre-commit
-     - name: Pre-commit checks
-       run: pre-commit run --all-files
+      - name: Pre-commit checks
+        run: pre-commit run --all-files
