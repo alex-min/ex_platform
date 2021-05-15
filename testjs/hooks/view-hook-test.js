@@ -1,37 +1,34 @@
 class ViewHookTest {
     constructor(hook, element) {
-      this.el = element;
-      this.__callbacks = hook;
-      this.events = []
-      for(let key in this.__callbacks){ this[key] = this.__callbacks[key] }
+        this.el = element;
+        this.__callbacks = hook;
+        this.events = [];
+        for(let key in this.__callbacks){ this[key] = this.__callbacks[key]; }
     }
   
     trigger(callbackName) {
-      this.__callbacks[callbackName].bind(this)();
+        this.__callbacks[callbackName].bind(this)();
     }
   
-    pushEvent(event, payload) {
-        this.events.push({event, payload})
-    }
     pushEvent(target, event, payload) {
-        this.events.push({target, event, payload})
+        this.events.push({target, event, payload});
     }
   
     element() {
-      return this.el;
+        return this.el;
     }
-  }
+}
   
-  function createElementFromHTML(htmlString) {
-    const div = document.createElement('div');
+function createElementFromHTML(htmlString) {
+    const div = document.createElement("div");
     div.innerHTML = htmlString.trim();
     return div.firstChild;
-  }
+}
   
-  function renderHook(htmlString, hook) {
+function renderHook(htmlString, hook) {
     const element = createElementFromHTML(htmlString);
     return new ViewHookTest(hook, element);
-  }
+}
   
-  export { renderHook, ViewHookTest, createElementFromHTML };
+export { renderHook, ViewHookTest, createElementFromHTML };
   
