@@ -84,6 +84,8 @@ jobs:
           key: ${{ runner.os }}-venv-${{ hashFiles('.tool-versions') }}
       - name: Install pre-commit
         run: pip install pre-commit
+      - name: Beautifier
+        run: gem install htmlbeautifier
       - name: Pre-commit checks
         run: |
           python -m venv venv
