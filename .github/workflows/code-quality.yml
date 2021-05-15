@@ -73,7 +73,7 @@ jobs:
           path: priv/plts
           key: ${{ runner.os }}-plts-${{ hashFiles('.tool-versions') }}
       - name: pip cache
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('.tool-versions') }}
