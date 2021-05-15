@@ -85,4 +85,4 @@ jobs:
       - name: Install pre-commit
         run: pip install pre-commit
       - name: Pre-commit checks
-        run: ~/.local/bin/pre-commit run --all-files
+        run: pre-commit run --all-files
