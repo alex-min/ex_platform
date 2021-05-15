@@ -14,7 +14,7 @@ repos:
         files: \.(ex|exs)$
         require_serial: true
     -   id: elixir_dialyzer
-        name: Mix dialyzer (please wait, takes a long time)
+        name: Mix dialyzer (please wait, can take a long time)
         language: system
         entry: mix dialyzer
         files: \.(ex|exs)$
