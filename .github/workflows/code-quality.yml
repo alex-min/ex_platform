@@ -72,4 +72,11 @@ jobs:
         with:
           path: priv/plts
           key: ${{ runner.os }}-plts-${{ hashFiles('.tool-versions') }}
-      - uses: pre-commit/action@v2.0.0
+      - name: Install pre-commit
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('.tool-versions') }}
+        run: pip install pre-commit
+     - name: Pre-commit checks
+       run: pre-commit run --all-files
