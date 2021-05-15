@@ -1,4 +1,4 @@
-name: Npde CI
+name: Node CI
 
 on:
   push:
