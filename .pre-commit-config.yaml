@@ -26,3 +26,9 @@ repos:
         args:
           - --fix
         files: \.(js|jsx|ts|tsx)$
+    -   id: htmlbeautifier
+        name: leex/eex beautifier
+        language: system
+        entry: bash .pre-commit/format-html.sh 
+        files: \.html\.(eex|leex)$
+

@@ -38,3 +38,5 @@ priv/plts
 
 # temp python virtual env
 venv
+
+vendor/bundle

@@ -3,6 +3,5 @@
     <%= render "_notification.html", text:  live_flash(@flash, :info), type: :info %>
     <%= render "_notification.html", text: live_flash(@flash, :error), type: :error %>
   </div>
-
   <%= @inner_content %>
 </main>

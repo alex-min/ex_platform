@@ -5,3 +5,5 @@ elixir 1.12.0-rc.0-otp-23
 erlang 24.0-rc2
 
 python 3.8.5
+
+ruby 2.7.3
