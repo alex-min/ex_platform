@@ -10,7 +10,10 @@ defmodule ExPlatform.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [
+        plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
+      ]
     ]
   end
 
@@ -56,7 +59,8 @@ defmodule ExPlatform.MixProject do
       {:ex_money, "~> 5.5.1"},
       {:ex_cldr_dates_times, "~> 2.6"},
       {:ex_cldr_calendars, "~> 1.12"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
   end
 

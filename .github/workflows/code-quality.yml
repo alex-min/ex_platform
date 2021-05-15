@@ -61,6 +61,18 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
       - name: Install dependencies
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+      - name: Install dependencies
         run: yarn
       - name: Elixir code quality
         run: mix credo
+      - name: PLT cache
+        uses: actions/cache@v2
+        with:
+          path: priv/plts
+          key: ${{ runner.os }}-plts-${{ hashFiles('.tool-versions') }}
+      - name: Elixir Dializer
+        run: mix dialyzer

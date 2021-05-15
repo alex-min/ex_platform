@@ -1,0 +1,21 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: elixir_source_checks
+        name: Credo checks
+        language: system
+        entry: mix credo
+        files: \.(ex|exs)$
+        require_serial: true
+    -   id: elixir_format
+        name: Mix format
+        language: system
+        entry: mix format
+        files: \.(ex|exs)$
+        require_serial: true
+    -   id: elixir_dialyzer
+        name: Mix dialyzer (please wait, takes a long time)
+        language: system
+        entry: mix dialyzer
+        files: \.(ex|exs)$
+        require_serial: true

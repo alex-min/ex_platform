@@ -16,6 +16,8 @@ defmodule ExPlatform.Accounts.User do
     timestamps()
   end
 
+  @type t() :: %__MODULE__{}
+
   @doc """
   A user changeset for registration.
 
