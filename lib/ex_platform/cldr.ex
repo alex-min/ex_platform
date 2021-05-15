@@ -1,4 +1,8 @@
 defmodule ExPlatform.Cldr do
+  @moduledoc """
+    I18n for numbers, currencies, dates and calendar.
+  """
+
   use Cldr,
     locales: Gettext.known_locales(ExPlatformWeb.Gettext),
     default_locale: "en",

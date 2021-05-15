@@ -53,8 +53,18 @@ defmodule ExPlatformWeb.UserConfirmationController do
     end
   end
 
+  @spec after_confim(Plug.Conn.t()) :: Plug.Conn.t()
+  defp after_confim(conn) do
+    if requested_json?(conn) do
+      conn |> json(%{status: :ok})
+    else
+      redirect(conn, to: "/")
+    end
+  end
+
   # Do not log in the user after confirmation to avoid a
   # leaked token giving the user access to the account.
+  @spec confirm(Plug.Conn.t(), map) :: Plug.Conn.t()
   def confirm(conn, %{"token" => token}) do
     case Accounts.confirm_user(token) do
       {:ok, _} ->
@@ -67,11 +77,7 @@ defmodule ExPlatformWeb.UserConfirmationController do
         # a warning message.
         case conn.assigns do
           %{current_user: %{confirmed_at: confirmed_at}} when not is_nil(confirmed_at) ->
-            if requested_json?(conn) do
-              conn |> json(%{status: :ok})
-            else
-              redirect(conn, to: "/")
-            end
+            after_confim(conn)
 
           %{} ->
             conn |> conn_failure()

@@ -1,4 +1,7 @@
 defmodule ExPlatform.Accounts.User do
+  @moduledoc """
+   User authentification
+  """
   use ExPlatform.Schema
   import Ecto.Changeset
   import ExPlatformWeb.Gettext

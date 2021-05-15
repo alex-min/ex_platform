@@ -55,7 +55,8 @@ defmodule ExPlatform.MixProject do
       {:ex_cldr, "~> 2.0"},
       {:ex_money, "~> 5.5.1"},
       {:ex_cldr_dates_times, "~> 2.6"},
-      {:ex_cldr_calendars, "~> 1.12"}
+      {:ex_cldr_calendars, "~> 1.12"},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
   end
 

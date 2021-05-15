@@ -1,4 +1,7 @@
 defmodule ExPlatformWeb.UserAuth do
+  @moduledoc """
+    User authentication controller utilities, login and session management.
+  """
   import Plug.Conn
   use ExPlatform.Controller
 

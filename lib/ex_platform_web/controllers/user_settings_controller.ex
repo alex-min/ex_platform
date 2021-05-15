@@ -12,9 +12,15 @@ defmodule ExPlatformWeb.UserSettingsController do
     render(conn, "edit.html")
   end
 
+  @spec current_user(Plug.Conn.t()) :: %ExPlatform.Accounts.User{}
+  defp current_user(conn) do
+    conn.assigns.current_user
+  end
+
+  @spec update(Plug.Conn.t(), map) :: Plug.Conn.t()
   def update(conn, %{"action" => "update_email"} = params) do
     %{"current_password" => password, "user" => user_params} = params
-    user = conn.assigns.current_user
+    user = current_user(conn)
 
     case Accounts.apply_user_email(user, password, user_params) do
       {:ok, applied_user} ->

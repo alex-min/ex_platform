@@ -1,4 +1,7 @@
 defmodule ExPlatformWeb.PageLive do
+  @moduledoc """
+   homepage
+  """
   use ExPlatformWeb, :live_view
 
   @impl true

@@ -1,4 +1,8 @@
 defmodule ExPlatform.Schema do
+  @moduledoc """
+   Helpful helpers for Ecto, uses UUID by default for the foreign key.
+   Adds a few methods like all(), first() and last() to look closer to ActiveRecord.
+  """
   defmacro __using__(_) do
     quote do
       use Ecto.Schema

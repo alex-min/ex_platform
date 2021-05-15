@@ -1,4 +1,7 @@
 defmodule ExPlatform.Accounts.UserToken do
+  @moduledoc """
+    User authentification tokens
+  """
   use ExPlatform.Schema
   import Ecto.Query
 

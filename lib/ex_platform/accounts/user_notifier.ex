@@ -1,4 +1,7 @@
 defmodule ExPlatform.Accounts.UserNotifier do
+  @moduledoc """
+    Delivers registration emails
+  """
   import Bamboo.Email
   use Bamboo.Phoenix, view: ExPlatformWeb.LayoutView
   alias ExPlatform.ActionEmail

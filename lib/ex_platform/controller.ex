@@ -1,4 +1,7 @@
 defmodule ExPlatform.Controller do
+  @moduledoc """
+   Main controller helper, adds a few helpful methods on controllers.
+  """
   defmacro __using__(_) do
     quote do
       import Phoenix.Controller

@@ -1,5 +1,8 @@
 # adapted from https://phrase.com/blog/posts/set-and-manage-locale-data-in-your-phoenix-l10n-project/
 defmodule ExPlatformWeb.Plugs.I18n do
+  @moduledoc """
+    I18n plug to set the language on an HTTP request.
+  """
   import Plug.Conn
 
   alias ExPlatform.Cldr

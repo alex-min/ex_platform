@@ -1,4 +1,7 @@
 defmodule ExPlatform.Mailer do
+  @moduledoc """
+    Sends emails
+  """
   use Bamboo.Mailer, otp_app: :ex_platform
   import Bamboo.Email
 
