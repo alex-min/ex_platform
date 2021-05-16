@@ -1,10 +1,9 @@
 <div class="relative z-10 shadow">
   <div class="container mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
     <div>
-      <a href="<%= if @current_user, do: "/", else: "/" %>" class="flex">
-        <span class="sr-only">Workflow</span>
+      <%= live_patch to: "/" do %>
         <img class="h-8 w-auto sm:h-10" src="/images/logo.png" alt="ExPlatform">
-      </a>
+      <% end %>
     </div>
     <div class="-mr-2 -my-2 md:hidden">
       <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -17,13 +16,6 @@
     </div>
     <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
       <nav class="flex space-x-10">
-        <%= if @current_user do %>
-          <%= live_patch gettext("Welcome"), to: "/",
-                class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
-        <% else %>
-          <%= live_patch gettext("Pricing"), to: "/pricing",
-                class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
-        <% end %>
       </nav>
       <div class="flex items-center md:ml-12">
         <%= if @current_user do %>
