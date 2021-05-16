@@ -1,15 +1,35 @@
-# ExPlatform
+# Install asdf
 
-To start your Phoenix server:
+Please install [asdf](https://asdf-vm.com/#/core-manage-asdf) which can install all the tooling required.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `yarn` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+```
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+```
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+then restart bash and install all the plugins:
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+```
+asdf plugin-add python
+asdf plugin-add erlang
+asdf plugin-add elixir
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add nodejs
+```
+
+Install all the tools:
+
+```
+asdf install
+```
+# Install pre-commit
+
+https://pre-commit.com/
+
+```
+pip install pre-commit
+pre-commit install
+```
 
 ## Learn more
 
