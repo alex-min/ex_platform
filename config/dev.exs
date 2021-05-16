@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.TestAdapter
+config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.LocalAdapter
 config :ex_platform, ExPlatform.Mailer, smtp_email_address: "hello@example.com"
 
 # Configure your database

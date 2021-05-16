@@ -18,7 +18,7 @@
     <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
       <nav class="flex space-x-10">
         <%= if @current_user do %>
-          <%= live_patch dgettext("app", "welcome.wallet_name"), to: "/",
+          <%= live_patch gettext("Welcome"), to: "/",
                 class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
         <% else %>
           <%= live_patch gettext("Pricing"), to: "/pricing",
