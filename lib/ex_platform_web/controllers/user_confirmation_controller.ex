@@ -20,7 +20,8 @@ defmodule ExPlatformWeb.UserConfirmationController do
     conn
     |> put_flash(
       :info,
-      gettext(
+      dgettext(
+        "auth",
         "If your email is in our system and it has not been confirmed yet, " <>
           "you will receive an email with instructions shortly."
       )
@@ -34,7 +35,7 @@ defmodule ExPlatformWeb.UserConfirmationController do
       conn |> json(gettext("Account confirmed successfully."))
     else
       conn
-      |> put_flash(:info, gettext("Account confirmed successfully."))
+      |> put_flash(:info, dgettext("auth", "Account confirmed successfully."))
       |> redirect(to: "/")
     end
   end

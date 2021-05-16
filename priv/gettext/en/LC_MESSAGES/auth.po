@@ -1,0 +1,274 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_settings_controller.ex:36
+msgid "A link to confirm your email change has been sent to the new address."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_confirmation_controller.ex:38
+msgid "Account confirmed successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:55
+msgid "Change email"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:95
+msgid "Change my email"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:67
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:97
+msgid "Change password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:24
+msgid "Change your Email"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:83
+msgid "Change your email"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:15
+msgid "Change your personal details here"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:48
+msgid "Confirm my account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:31
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:82
+msgid "Confirm new password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:36
+msgid "Confirm your account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:72
+msgid "Create a new password."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:63
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:53
+msgid "Create an account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:43
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:50 lib/ex_platform_web/templates/user_settings/edit.html.eex:89
+msgid "Current Password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:20
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:23 lib/ex_platform_web/templates/user_reset_password/new.html.eex:13
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:23 lib/ex_platform_web/templates/user_session/new.html.eex:21
+#: lib/ex_platform_web/templates/user_session/new.html.eex:25 lib/ex_platform_web/templates/user_settings/edit.html.eex:38
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:39
+msgid "Email"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_settings_controller.ex:73
+msgid "Email change link is invalid or it has expired."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_settings_controller.ex:68
+msgid "Email changed successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:49
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:7 lib/ex_platform_web/templates/user_session/new.html.eex:45
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:30
+msgid "Forgot your password?"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:85
+msgid "Hi %{email},\n\nYou can change your email by clicking below:\n"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:38
+msgid "Hi %{email},\n\nYou can confirm your account by clicking below:\n"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:62
+msgid "Hi %{email},\n\nYou can reset your password by clicking below:\n"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:50
+msgid "If you didn't create an account with us, please ignore this."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:73
+#: lib/ex_platform/accounts/user_notifier.ex:96
+msgid "If you didn't request this change, please ignore this."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_confirmation_controller.ex:23
+msgid "If your email is in our system and it has not been confirmed yet, you will receive an email with instructions shortly."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_reset_password_controller.ex:20
+msgid "If your email is in our system, you will receive instructions to reset your password shortly."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:32
+msgid "Log out"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_session_controller.ex:30
+msgid "Logged out successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:18
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:77
+msgid "New password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:64
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:53 lib/ex_platform_web/templates/user_reset_password/new.html.eex:43
+#: lib/ex_platform_web/templates/user_session/new.html.eex:60
+msgid "Or"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:31
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:35 lib/ex_platform_web/templates/user_reset_password/edit.html.eex:22
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:35 lib/ex_platform_web/templates/user_session/new.html.eex:30
+#: lib/ex_platform_web/templates/user_session/new.html.eex:34
+msgid "Password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_reset_password_controller.ex:54
+msgid "Password reset successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_settings_controller.ex:55
+msgid "Password updated successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:54
+msgid "Register"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:8
+#: lib/ex_platform_web/templates/user_session/new.html.eex:66
+msgid "Register your account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:45
+#: lib/ex_platform_web/templates/user_session/new.html.eex:41
+msgid "Remember me"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:72
+msgid "Reset my password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:12
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:43
+msgid "Reset password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_reset_password_controller.ex:69
+msgid "Reset password link is invalid or it has expired."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user_notifier.ex:60
+msgid "Reset your password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:32
+msgid "Send instructions to reset password"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:13
+msgid "Settings"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:35
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:49 lib/ex_platform_web/templates/user_session/new.html.eex:50
+msgid "Sign in"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:70
+#: lib/ex_platform_web/templates/user_session/new.html.eex:9
+msgid "Sign in to your account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:37
+msgid "Sign up"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:59
+msgid "Sign-in to your account"
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_registration_controller.ex:25
+msgid "User created successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:29
+msgid "You need to enter your password to change your email."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform_web/controllers/user_reset_password_controller.ex:14
+msgid "You will receive instructions to reset your password on %{email}."
+msgstr ""

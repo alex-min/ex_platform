@@ -4,13 +4,13 @@
 <div class="flex-1 h-full bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
     <img class="mx-auto h-12 w-auto" src="/images/logo.png" alt="Workflow">
-    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900"><%= gettext("Forgot your password?") %></h2>
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900"><%= dgettext("auth", "Forgot your password?") %></h2>
   </div>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">
-          <%= label f, :email, gettext("Email") %>
+          <%= label f, :email, dgettext("auth", "Email") %>
         </label>
         <%= if @current_user do %>
           <%= hidden_input f, :email, value: @current_user.email %>
@@ -20,7 +20,7 @@
              value: (if @current_user, do: @current_user.email, else: ""),
              disabled: (if @current_user, do: true, else: false),
              required: true,
-             placeholder: gettext("Email"),
+             placeholder: dgettext("auth", "Email"),
              class: "#{if @current_user, do: "bg-gray-50 text-gray-500", else: ""}
                     appearance-none block w-full px-3 py-2 border border-gray-300
                     rounded-md shadow-sm placeholder-gray-400
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div>
-        <%= submit gettext("Send instructions to reset password"),
+        <%= submit dgettext("auth", "Send instructions to reset password"),
               class: "w-full btn-primary mt-5" %>
       </div>
       <%= if !@current_user do %>
@@ -40,17 +40,17 @@
             </div>
             <div class="relative flex justify-center text-sm">
               <span class="px-2 bg-white text-gray-500">
-                <%= gettext("Or") %>
+                <%= dgettext("auth", "Or") %>
               </span>
             </div>
           </div>
           <div class="mt-6 flex justify-center grid grid-cols-2 gap-3">
             <div>
-              <%= link gettext("Sign in"), to: Routes.user_session_path(@conn, :new),
+              <%= link dgettext("auth", "Sign in"), to: Routes.user_session_path(@conn, :new),
                   class: "block font-medium text-center text-indigo-400 hover:text-indigo-500" %>
             </div>
             <div>
-              <%= link gettext("Create an account"), to: Routes.user_registration_path(@conn, :new),
+              <%= link dgettext("auth", "Create an account"), to: Routes.user_registration_path(@conn, :new),
                   class: "block font-medium text-center text-indigo-400 hover:text-indigo-500" %>
             </div>
           </div>

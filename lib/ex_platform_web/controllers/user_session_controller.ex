@@ -27,7 +27,7 @@ defmodule ExPlatformWeb.UserSessionController do
   @spec delete(Plug.Conn.t(), any) :: Plug.Conn.t()
   def delete(conn, _params) do
     conn
-    |> put_flash(:info, gettext("Logged out successfully."))
+    |> put_flash(:info, dgettext("auth", "Logged out successfully."))
     |> UserAuth.log_out_user()
   end
 end

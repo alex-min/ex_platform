@@ -11,12 +11,14 @@ defmodule ExPlatformWeb.UserResetPasswordController do
 
   defp reset_password_text(conn) do
     if conn.assigns[:current_user] do
-      gettext(
+      dgettext(
+        "auth",
         "You will receive instructions to reset your password on %{email}.",
         email: conn.assigns[:current_user].email
       )
     else
-      gettext(
+      dgettext(
+        "auth",
         "If your email is in our system, you will receive instructions to reset your password shortly."
       )
     end
@@ -49,7 +51,7 @@ defmodule ExPlatformWeb.UserResetPasswordController do
     case Accounts.reset_user_password(conn.assigns.user, user_params) do
       {:ok, _} ->
         conn
-        |> put_flash(:info, gettext("Password reset successfully."))
+        |> put_flash(:info, dgettext("auth", "Password reset successfully."))
         |> redirect(to: Routes.user_session_path(conn, :new))
 
       {:error, changeset} ->
@@ -64,7 +66,7 @@ defmodule ExPlatformWeb.UserResetPasswordController do
       conn |> assign(:user, user) |> assign(:token, token)
     else
       conn
-      |> put_flash(:error, gettext("Reset password link is invalid or it has expired."))
+      |> put_flash(:error, dgettext("auth", "Reset password link is invalid or it has expired."))
       |> redirect(to: "/")
       |> halt()
     end

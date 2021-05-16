@@ -33,9 +33,10 @@ defmodule ExPlatform.Accounts.UserNotifier do
   def deliver_confirmation_instructions(user, url) do
     deliver(%ActionEmail{
       to: user.email,
-      title: gettext("Confirm your account"),
+      title: dgettext("auth", "Confirm your account"),
       top_text:
-        gettext(
+        dgettext(
+          "auth",
           """
           Hi %{email},
 
@@ -44,8 +45,9 @@ defmodule ExPlatform.Accounts.UserNotifier do
           email: user.email
         ),
       link_to: url,
-      link_text: gettext("Confirm my account"),
-      bottom_text: gettext("If you didn't create an account with us, please ignore this.")
+      link_text: dgettext("auth", "Confirm my account"),
+      bottom_text:
+        dgettext("auth", "If you didn't create an account with us, please ignore this.")
     })
   end
 
@@ -55,9 +57,10 @@ defmodule ExPlatform.Accounts.UserNotifier do
   def deliver_reset_password_instructions(user, url) do
     deliver(%ActionEmail{
       to: user.email,
-      title: gettext("Reset your password"),
+      title: dgettext("auth", "Reset your password"),
       top_text:
-        gettext(
+        dgettext(
+          "auth",
           """
           Hi %{email},
 
@@ -66,8 +69,8 @@ defmodule ExPlatform.Accounts.UserNotifier do
           email: user.email
         ),
       link_to: url,
-      link_text: gettext("Reset my password"),
-      bottom_text: gettext("If you didn't request this change, please ignore this.")
+      link_text: dgettext("auth", "Reset my password"),
+      bottom_text: dgettext("auth", "If you didn't request this change, please ignore this.")
     })
   end
 
@@ -77,9 +80,10 @@ defmodule ExPlatform.Accounts.UserNotifier do
   def deliver_update_email_instructions(user, url) do
     deliver(%ActionEmail{
       to: user.email,
-      title: gettext("Change your email"),
+      title: dgettext("auth", "Change your email"),
       top_text:
-        gettext(
+        dgettext(
+          "auth",
           """
           Hi %{email},
 
@@ -88,8 +92,8 @@ defmodule ExPlatform.Accounts.UserNotifier do
           email: user.email
         ),
       link_to: url,
-      link_text: gettext("Change my email"),
-      bottom_text: gettext("If you didn't request this change, please ignore this.")
+      link_text: dgettext("auth", "Change my email"),
+      bottom_text: dgettext("auth", "If you didn't request this change, please ignore this.")
     })
   end
 end

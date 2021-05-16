@@ -8,7 +8,7 @@ defmodule ExPlatformWeb.Gettext do
       import ExPlatformWeb.Gettext
 
       # Simple translation
-      gettext("Here is the string to translate")
+      dgettext("auth", "Here is the string to translate")
 
       # Plural translation
       ngettext("Here is the string to translate",

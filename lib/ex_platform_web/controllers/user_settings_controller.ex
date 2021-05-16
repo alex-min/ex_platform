@@ -33,7 +33,10 @@ defmodule ExPlatformWeb.UserSettingsController do
         conn
         |> put_flash(
           :info,
-          gettext("A link to confirm your email change has been sent to the new address.")
+          dgettext(
+            "auth",
+            "A link to confirm your email change has been sent to the new address."
+          )
         )
         |> redirect(to: Routes.user_settings_path(conn, :edit))
 
@@ -49,7 +52,7 @@ defmodule ExPlatformWeb.UserSettingsController do
     case Accounts.update_user_password(user, password, user_params) do
       {:ok, user} ->
         conn
-        |> put_flash(:info, gettext("Password updated successfully."))
+        |> put_flash(:info, dgettext("auth", "Password updated successfully."))
         |> put_session(:user_return_to, Routes.user_settings_path(conn, :edit))
         |> UserAuth.log_in_user(user)
 
@@ -62,12 +65,12 @@ defmodule ExPlatformWeb.UserSettingsController do
     case Accounts.update_user_email(conn.assigns.current_user, token) do
       :ok ->
         conn
-        |> put_flash(:info, gettext("Email changed successfully."))
+        |> put_flash(:info, dgettext("auth", "Email changed successfully."))
         |> redirect(to: Routes.user_settings_path(conn, :edit))
 
       :error ->
         conn
-        |> put_flash(:error, gettext("Email change link is invalid or it has expired."))
+        |> put_flash(:error, dgettext("auth", "Email change link is invalid or it has expired."))
         |> redirect(to: Routes.user_settings_path(conn, :edit))
     end
   end

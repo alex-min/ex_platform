@@ -29,12 +29,12 @@
         <%= if @current_user do %>
           <%= live_patch @current_user.email, to: Routes.user_settings_path(@conn, :edit),
                 class: "text-base font-medium text-indigo-600 hover:text-gray-900" %>
-          <%= link gettext("Log out"), to: Routes.user_session_path(@conn, :delete), method: :delete,
+          <%= link dgettext("auth", "Log out"), to: Routes.user_session_path(@conn, :delete), method: :delete,
                 class: "ml-8 text-base font-medium text-gray-500 hover:text-gray-900" %>
         <% else %>
-          <%= live_patch gettext("Sign in"), to: Routes.user_session_path(@conn, :new),
+          <%= live_patch dgettext("auth", "Sign in"), to: Routes.user_session_path(@conn, :new),
                 class: "text-base font-medium text-gray-500 hover:text-gray-900" %>
-          <%= live_patch gettext("Sign up"), to: Routes.user_registration_path(@conn, :new),
+          <%= live_patch dgettext("auth", "Sign up"), to: Routes.user_registration_path(@conn, :new),
                 class: "ml-8 inline-flex items-center justify-center px-4 py-2
                         border border-transparent rounded-md shadow-sm text-base font-medium
                         text-white bg-indigo-600 hover:bg-indigo-700" %>

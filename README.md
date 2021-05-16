@@ -31,3 +31,10 @@ pip install pre-commit
 pre-commit install
 ```
 
+# update locales
+
+```
+mix gettext.extract
+mix gettext.merge priv/gettext/ --locale en
+mix gettext.merge priv/gettext/ --locale fr
+```

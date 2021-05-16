@@ -10,9 +10,9 @@
         <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5 pb-5">
           <div class="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
             <div>
-              <h3 class="text-lg leading-6 font-medium text-gray-900">Settings</h3>
+              <h3 class="text-lg leading-6 font-medium text-gray-900"><%= dgettext("auth", "Settings") %></h3>
               <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                <%= gettext("Change your personal details here") %>
+                <%= dgettext("auth", "Change your personal details here") %>
               </p>
             </div>
             <div class="space-y-6 sm:space-y-5 divide-y divide-gray-200">
@@ -21,13 +21,13 @@
                   <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
                     <div>
                       <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-email">
-                        <%= gettext("Change your Email") %>
+                        <%= dgettext("auth", "Change your email") %>
                       </div>
                     </div>
                     <div class="mt-4 sm:mt-0 sm:col-span-2">
                       <p class="text-sm text-gray-500 mb-5">
-                        <%= gettext("You need to enter your password to change your email.") %>
-                        <%= link gettext("Forgot your password?"), to: Routes.user_reset_password_path(@conn, :new),
+                        <%= dgettext("auth", "You need to enter your password to change your email.") %>
+                        <%= link dgettext("auth", "Forgot your password?"), to: Routes.user_reset_password_path(@conn, :new),
                                       class: "font-medium text-indigo-400 hover:text-indigo-500" %>
                       </p>
                       <div class="max-w-lg space-y-4">
@@ -35,24 +35,24 @@
                         <div class="relative flex items-start">
                           <div>
                             <%= hidden_input f, :action, name: "action", value: "update_email" %>
-                            <%= label f, :email, gettext("Email"), class: "block text-sm font-medium text-gray-700" %>
-                            <%= email_input f, :email, required: true, class: "input", placeholder: gettext("Email") %>
+                            <%= label f, :email, dgettext("auth", "Email"), class: "block text-sm font-medium text-gray-700" %>
+                            <%= email_input f, :email, required: true, class: "input", placeholder: dgettext("auth", "Email") %>
                             <%= error_tag f, :email %>
                           </div>
                           <div class="ml-3 text-sm">
-                            <%= label f, :current_password, gettext("Current Password"),
+                            <%= label f, :current_password, dgettext("auth", "Current Password"),
                                 for: "current_password_for_email",
                                 class: "block text-sm font-medium text-gray-700" %>
                             <%= password_input f, :current_password,
                               required: true,
                               name: "current_password",
                               id: "current_password_for_email", class: "input",
-                              title: gettext("Current Password")
+                              title: dgettext("auth", "Current Password")
                               %>
                             <%= error_tag f, :current_password %>
                           </div>
                         </div>
-                        <%= submit gettext("Change email"), class: 'btn-primary mt-5' %>
+                        <%= submit dgettext("auth", "Change email"), class: 'btn-primary mt-5' %>
                       <% end %>
                     </div>
                   </div>
@@ -64,29 +64,29 @@
                 <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
                   <div>
                     <div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-notifications">
-                      <%= gettext("Change password") %>
+                      <%= dgettext("auth", "Change password") %>
                     </div>
                   </div>
                   <div class="sm:col-span-2">
                     <div class="max-w-lg">
-                      <p class="text-sm text-gray-500 mb-3"><%= gettext("Create a new password.") %></p>
+                      <p class="text-sm text-gray-500 mb-3"><%= dgettext("auth", "Create a new password.") %></p>
                       <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update), fn f -> %>
                       <div class="relative flex items-start">
                         <%= hidden_input f, :action, name: "action", value: "update_password" %>
                         <div>
-                          <%= label f, :password, gettext("New password"),
+                          <%= label f, :password, dgettext("auth", "New password"),
                               class: "block text-sm font-medium text-gray-700" %>
                           <%= password_input f, :password, required: true, class: "input" %>
                           <%= error_tag f, :password %>
                           <div class="mt-3">
-                            <%= label f, :password_confirmation, gettext("Confirm new password"),
+                            <%= label f, :password_confirmation, dgettext("auth", "Confirm new password"),
                                 class: "block text-sm font-medium text-gray-700" %>
                             <%= password_input f, :password_confirmation, required: true, class: "input" %>
                             <%= error_tag f, :password_confirmation %>
                           </div>
                         </div>
                         <div class="ml-3">
-                          <%= label f, :current_password, gettext("Current Password"), for: "current_password_for_password",
+                          <%= label f, :current_password, dgettext("auth", "Current Password"), for: "current_password_for_password",
                                 class: "block text-sm font-medium text-gray-700" %>
                           <%= password_input f, :current_password, required: true,
                             name: "current_password", id: "current_password_for_password",
@@ -94,7 +94,7 @@
                           <%= error_tag f, :current_password %>
                         </div>
                       </div>
-                      <%= submit gettext("Change password"), class: "btn-primary mt-5" %>
+                      <%= submit dgettext("auth", "Change password"), class: "btn-primary mt-5" %>
                     <% end %>
                   </div>
                 </div>
