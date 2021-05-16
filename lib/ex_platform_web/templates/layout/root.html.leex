@@ -11,11 +11,9 @@
   </head>
   <body  class="min-h-screen flex flex-col grid" style="grid-template-rows: auto 1fr auto">
     <%= render "_menu.html", conn: @conn, current_user: assigns[:current_user] %>
-    <div class="content">
+    <div style="background: #ece5e5">
       <%= @inner_content %>
     </div>
-    <div class="footer">
-      footer
-    </div>
+    <%= render "_footer.html", conn: @conn, current_user: assigns[:current_user] %>
   </body>
 </html>
