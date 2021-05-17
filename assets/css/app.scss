@@ -125,3 +125,7 @@ svg {
     fill: #0D2B3E
   }
 }
+
+div[data-phx-view] {
+  height: 100%;
+}
