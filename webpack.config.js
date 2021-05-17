@@ -9,9 +9,11 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = (_env, options) => {
   const devMode = options.mode !== "production";
+  process.env["NODE_ENV"] = devMode ? "development" : "production";
 
   return {
     optimization: {
+      usedExports: true,
       minimizer: [
         new TerserPlugin({ parallel: true, terserOptions: {sourceMap: devMode }}),
         new OptimizeCSSAssetsPlugin({})

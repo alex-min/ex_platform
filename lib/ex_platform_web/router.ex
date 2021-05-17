@@ -77,7 +77,7 @@ defmodule ExPlatformWeb.Router do
 
     get "/users/register", UserRegistrationController, :new
     post "/users/register", UserRegistrationController, :create
-    get "/users/log_in", UserSessionController, :new
+    live "/users/log_in", UserSessionLive, :new
     post "/users/log_in", UserSessionController, :create
   end
 

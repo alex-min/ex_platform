@@ -9,9 +9,9 @@
     <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-  <body  class="min-h-screen flex flex-col grid" style="grid-template-rows: auto 1fr auto">
+  <body class="min-h-screen flex flex-col grid" style="grid-template-rows: auto 1fr auto">
     <%= render "_menu.html", conn: @conn, current_user: assigns[:current_user] %>
-    <div style="background: #ece5e5">
+    <div class="bg-gray-200">
       <%= @inner_content %>
     </div>
     <%= render "_footer.html", conn: @conn, current_user: assigns[:current_user] %>

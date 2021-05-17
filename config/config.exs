@@ -20,7 +20,7 @@ config :ex_platform,
 
 # Configures the endpoint
 config :ex_platform, ExPlatformWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "localhost", port: 4000],
   secret_key_base: "5DbQXonRAXilsfYdl5lzyYhGs9L9bw4ynVIbx4JdFXZokjISD/hn949U+4ZAFmzc",
   render_errors: [view: ExPlatformWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: ExPlatform.PubSub,
@@ -33,6 +33,8 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :ex_platform, :company_name, "ExPlatform"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

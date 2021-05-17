@@ -56,5 +56,5 @@ jobs:
         run: yarn
       - name: tests
         run: yarn test
-      - name: webpack
-        run: webpack
+      - name: webpack compiles fine
+        run: webpack --mode production

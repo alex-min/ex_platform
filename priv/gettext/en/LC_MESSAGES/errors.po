@@ -118,17 +118,17 @@ msgid "You must log in to access this page."
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:94
+#: lib/ex_platform/accounts/user.ex:96
 msgid "did not change"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:114
+#: lib/ex_platform/accounts/user.ex:116
 msgid "does not match password"
 msgstr ""
 
 ## From Ecto.Changeset.put_change/3
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:150
+#: lib/ex_platform/accounts/user.ex:152
 msgid "is not valid"
 msgstr ""

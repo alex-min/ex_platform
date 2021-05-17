@@ -10,8 +10,3 @@ msgid ""
 msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2\n"
-
-#, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:21
-msgid "welcome.wallet_name"
-msgstr ""

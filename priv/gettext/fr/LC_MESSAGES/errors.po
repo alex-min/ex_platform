@@ -12,22 +12,22 @@ msgstr ""
 "Plural-Forms: nplurals=2\n"
 
 msgid "can't be blank"
-msgstr ""
+msgstr "ne peut pas être vide"
 
 msgid "has already been taken"
-msgstr ""
+msgstr "est déjà pris"
 
 msgid "is invalid"
-msgstr ""
+msgstr "est invalide"
 
 msgid "must be accepted"
-msgstr ""
+msgstr "dois être accepté"
 
 msgid "has invalid format"
-msgstr ""
+msgstr "à un format invalide"
 
 msgid "has an invalid entry"
-msgstr ""
+msgstr "à une entrée invalide"
 
 msgid "is reserved"
 msgstr ""
@@ -108,16 +108,16 @@ msgid "You must log in to access this page."
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:94
+#: lib/ex_platform/accounts/user.ex:96
 msgid "did not change"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:114
+#: lib/ex_platform/accounts/user.ex:116
 msgid "does not match password"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform/accounts/user.ex:150
+#: lib/ex_platform/accounts/user.ex:152
 msgid "is not valid"
 msgstr ""

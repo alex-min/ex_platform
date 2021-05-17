@@ -31,4 +31,9 @@ defmodule ExPlatform.Application do
     ExPlatformWeb.Endpoint.config_change(changed, removed)
     :ok
   end
+
+  @spec company_name :: String.t()
+  def company_name do
+    Application.get_env(:ex_platform, :company_name)
+  end
 end

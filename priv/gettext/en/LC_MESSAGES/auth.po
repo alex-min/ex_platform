@@ -22,7 +22,7 @@ msgid "Account confirmed successfully."
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:55
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:59
 msgid "Change email"
 msgstr ""
 
@@ -32,23 +32,19 @@ msgid "Change my email"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:67
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:97
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:72
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:102
 msgid "Change password"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:24
-msgid "Change your Email"
-msgstr ""
-
-#, elixir-format
 #: lib/ex_platform/accounts/user_notifier.ex:83
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:28
 msgid "Change your email"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:15
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:18
 msgid "Change your personal details here"
 msgstr ""
 
@@ -59,7 +55,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:31
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:82
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:87
 msgid "Confirm new password"
 msgstr ""
 
@@ -69,7 +65,7 @@ msgid "Confirm your account"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:72
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:77
 msgid "Create a new password."
 msgstr ""
 
@@ -80,17 +76,18 @@ msgid "Create an account"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:43
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:50 lib/ex_platform_web/templates/user_settings/edit.html.eex:89
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:47
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:54 lib/ex_platform_web/templates/user_settings/edit.html.eex:94
 msgid "Current Password"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:20
+#: lib/ex_platform_web/live/user_session_live.html.leex:23
+#: lib/ex_platform_web/live/user_session_live.html.leex:27 lib/ex_platform_web/templates/user_registration/new.html.eex:20
 #: lib/ex_platform_web/templates/user_registration/new.html.eex:23 lib/ex_platform_web/templates/user_reset_password/new.html.eex:13
 #: lib/ex_platform_web/templates/user_reset_password/new.html.eex:23 lib/ex_platform_web/templates/user_session/new.html.eex:21
-#: lib/ex_platform_web/templates/user_session/new.html.eex:25 lib/ex_platform_web/templates/user_settings/edit.html.eex:38
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:39
+#: lib/ex_platform_web/templates/user_session/new.html.eex:25 lib/ex_platform_web/templates/user_settings/edit.html.eex:42
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:43
 msgid "Email"
 msgstr ""
 
@@ -105,9 +102,9 @@ msgid "Email changed successfully."
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:49
-#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:7 lib/ex_platform_web/templates/user_session/new.html.eex:45
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:30
+#: lib/ex_platform_web/live/user_session_live.html.leex:49
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:49 lib/ex_platform_web/templates/user_reset_password/new.html.eex:7
+#: lib/ex_platform_web/templates/user_session/new.html.eex:45 lib/ex_platform_web/templates/user_settings/edit.html.eex:34
 msgid "Forgot your password?"
 msgstr ""
 
@@ -148,7 +145,7 @@ msgid "If your email is in our system, you will receive instructions to reset yo
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:32
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:24
 msgid "Log out"
 msgstr ""
 
@@ -159,19 +156,20 @@ msgstr ""
 
 #, elixir-format
 #: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:18
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:77
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:82
 msgid "New password"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:64
-#: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:53 lib/ex_platform_web/templates/user_reset_password/new.html.eex:43
-#: lib/ex_platform_web/templates/user_session/new.html.eex:60
+#: lib/ex_platform_web/live/user_session_live.html.leex:64
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:64 lib/ex_platform_web/templates/user_reset_password/edit.html.eex:53
+#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:43 lib/ex_platform_web/templates/user_session/new.html.eex:60
 msgid "Or"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:31
+#: lib/ex_platform_web/live/user_session_live.html.leex:33
+#: lib/ex_platform_web/live/user_session_live.html.leex:37 lib/ex_platform_web/templates/user_registration/new.html.eex:31
 #: lib/ex_platform_web/templates/user_registration/new.html.eex:35 lib/ex_platform_web/templates/user_reset_password/edit.html.eex:22
 #: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:35 lib/ex_platform_web/templates/user_session/new.html.eex:30
 #: lib/ex_platform_web/templates/user_session/new.html.eex:34
@@ -194,14 +192,14 @@ msgid "Register"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:8
-#: lib/ex_platform_web/templates/user_session/new.html.eex:66
+#: lib/ex_platform_web/live/user_session_live.html.leex:70
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:8 lib/ex_platform_web/templates/user_session/new.html.eex:66
 msgid "Register your account"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:45
-#: lib/ex_platform_web/templates/user_session/new.html.eex:41
+#: lib/ex_platform_web/live/user_session_live.html.leex:45
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:45 lib/ex_platform_web/templates/user_session/new.html.eex:41
 msgid "Remember me"
 msgstr ""
 
@@ -232,24 +230,25 @@ msgid "Send instructions to reset password"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:13
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:15
 msgid "Settings"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:35
-#: lib/ex_platform_web/templates/user_reset_password/new.html.eex:49 lib/ex_platform_web/templates/user_session/new.html.eex:50
+#: lib/ex_platform_web/live/user_session_live.html.leex:54
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:27 lib/ex_platform_web/templates/user_reset_password/new.html.eex:49
+#: lib/ex_platform_web/templates/user_session/new.html.eex:50
 msgid "Sign in"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_registration/new.html.eex:70
-#: lib/ex_platform_web/templates/user_session/new.html.eex:9
+#: lib/ex_platform_web/live/user_session_live.html.leex:11
+#: lib/ex_platform_web/templates/user_registration/new.html.eex:70 lib/ex_platform_web/templates/user_session/new.html.eex:9
 msgid "Sign in to your account"
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:37
+#: lib/ex_platform_web/templates/layout/_menu.html.leex:29
 msgid "Sign up"
 msgstr ""
 
@@ -264,11 +263,16 @@ msgid "User created successfully."
 msgstr ""
 
 #, elixir-format
-#: lib/ex_platform_web/templates/user_settings/edit.html.eex:29
+#: lib/ex_platform_web/templates/user_settings/edit.html.eex:33
 msgid "You need to enter your password to change your email."
 msgstr ""
 
 #, elixir-format
 #: lib/ex_platform_web/controllers/user_reset_password_controller.ex:14
 msgid "You will receive instructions to reset your password on %{email}."
+msgstr ""
+
+#, elixir-format
+#: lib/ex_platform/accounts/user.ex:49
+msgid "must have the @ sign and no spaces"
 msgstr ""

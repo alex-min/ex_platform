@@ -15,8 +15,3 @@ msgstr ""
 #: lib/ex_platform_web/controllers/user_confirmation_controller.ex:35
 msgid "Account confirmed successfully."
 msgstr ""
-
-#, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:24
-msgid "Pricing"
-msgstr ""

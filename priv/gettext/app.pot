@@ -9,8 +9,3 @@
 ## effect: edit them in PO (.po) files instead.
 msgid ""
 msgstr ""
-
-#, elixir-format
-#: lib/ex_platform_web/templates/layout/_menu.html.leex:21
-msgid "welcome.wallet_name"
-msgstr ""
