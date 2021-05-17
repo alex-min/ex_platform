@@ -8,7 +8,7 @@ defmodule ExPlatformWeb.UserSessionController do
 
   @spec new(Plug.Conn.t(), any) :: Plug.Conn.t()
   def new(conn, _params) do
-    render(conn, :new, error_message: nil)
+    render(conn, :new, error_message: nil, changeset: conn)
   end
 
   @spec create(Plug.Conn.t(), map) :: Plug.Conn.t()
@@ -20,7 +20,10 @@ defmodule ExPlatformWeb.UserSessionController do
     else
       conn
       |> put_status(400)
-      |> render(:new, error_message: dgettext("errors", "Invalid email or password"))
+      |> render(:new,
+        error_message: dgettext("errors", "Invalid email or password"),
+        changeset: conn
+      )
     end
   end
 
