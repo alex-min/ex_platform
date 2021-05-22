@@ -8,6 +8,7 @@ defmodule ExPlatformWeb.UserSettingsController do
 
   plug :assign_email_and_password_changesets
 
+  @spec edit(Plug.Conn.t(), any) :: Plug.Conn.t()
   def edit(conn, _params) do
     render(conn, "edit.html")
   end
@@ -61,6 +62,7 @@ defmodule ExPlatformWeb.UserSettingsController do
     end
   end
 
+  @spec confirm_email(Plug.Conn.t(), map) :: Plug.Conn.t()
   def confirm_email(conn, %{"token" => token}) do
     case Accounts.update_user_email(conn.assigns.current_user, token) do
       :ok ->
@@ -75,6 +77,7 @@ defmodule ExPlatformWeb.UserSettingsController do
     end
   end
 
+  @spec assign_email_and_password_changesets(Plug.Conn.t(), any()) :: Plug.Conn.t()
   defp assign_email_and_password_changesets(conn, _opts) do
     user = conn.assigns.current_user
 
