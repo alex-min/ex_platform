@@ -37,7 +37,7 @@ describe("Validate unused hook", () => {
         }
       }
 
-      let error = "These hooks are missing:\n";
+      let error = "These hooks are missing from the Javascript LiveSocket:\n";
       hooksMissings.forEach(hookName => {
         error += ` - The hook '${hookName}' is required in these files:\n`;
         requiredHooks[hookName].forEach(file => {
