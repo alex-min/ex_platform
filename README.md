@@ -17,6 +17,7 @@ Future integrations:
 - A pricing page connected to Stripe
 - A landing page
 - Admin pages
+- Mobile view
 - ...
 
 Please send a PR if you have some good features you would like to integrate to ExPlatform.
