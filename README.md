@@ -1,4 +1,4 @@
-# Why using this boilerplate
+# ExPlatorm, a battery-included battery Phoenix boilerplate!
 
 What's included out of the box: 
 - TailwindCSS with Tailwind jit
