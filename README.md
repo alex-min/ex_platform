@@ -1,5 +1,7 @@
 # ExPlatorm, a battery-included battery Phoenix boilerplate!
 
+https://alex-min.fr/opensourcing-my-phoenix-boilerplate/
+
 What's included out of the box: 
 - TailwindCSS with Tailwind jit
 - Phoenix auth integrated with nice Tailwind pages and transformed to support i18n
