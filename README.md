@@ -6,11 +6,12 @@ What's included out of the box:
 - i18n everywhere (PRs are welcomed to add more languages)
 - Notifications with a nice animation and auto-clear
 - Auth emails are using Bamboo and proper HTML template
-- Javascripts tests (and I've included some to demo it)
+- Javascripts tests with Jest (and I've included some built-in tests)
 - Pre-commit checks for styling & dialyzer (this boilerplate is ready for team work)
 - Github actions checking the pre-commits and the tests for each commit
 - Dependabot
 - Asdf integration, just use the .tools-versions for all your versions! It's also what's used in the Github actions. 
+- Eslint
 
 Future integrations:
 - A pricing page connected to Stripe
