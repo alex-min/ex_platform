@@ -11,14 +11,15 @@ defmodule ExPlatformWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
-    plug ExPlatformWeb.Plugs.I18n, "en"
+    plug Cldr.Plug.AcceptLanguage, cldr_backend: ExPlatform.Cldr
+    plug ExPlatformWeb.Plugs.I18n
   end
 
   pipeline :api do
     plug :accepts, ["json"]
     plug :fetch_session
     plug :fetch_current_user
-    plug ExPlatformWeb.Plugs.I18n, "en"
+    plug ExPlatformWeb.Plugs.I18n
     plug ExPlatformWeb.Plugs.NoFlash
 
     plug Plug.Parsers,

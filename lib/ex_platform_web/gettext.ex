@@ -21,4 +21,9 @@ defmodule ExPlatformWeb.Gettext do
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
   use Gettext, otp_app: :ex_platform
+
+  @spec set_locale(Gettext.locale()) :: nil
+  def set_locale(locale) do
+    Gettext.put_locale(ExPlatformWeb.Gettext, locale)
+  end
 end
