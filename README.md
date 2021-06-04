@@ -1,8 +1,9 @@
-# ExPlatorm, a battery-included battery Phoenix boilerplate!
+# ExPlatform, a battery-included battery Phoenix boilerplate!
 
 https://alex-min.fr/open-sourcing-my-phoenix-boilerplate/
 
-What's included out of the box: 
+What's included out of the box:
+
 - TailwindCSS with Tailwind jit
 - Phoenix auth integrated with nice Tailwind pages and transformed to support i18n
 - i18n everywhere (PRs are welcomed to add more languages)
@@ -12,10 +13,11 @@ What's included out of the box:
 - Pre-commit checks for styling & dialyzer (this boilerplate is ready for team work)
 - Github actions checking the pre-commits and the tests for each commit
 - Dependabot
-- Asdf integration, just use the .tools-versions for all your versions! It's also what's used in the Github actions. 
+- Asdf integration, just use the .tools-versions for all your versions! It's also what's used in the Github actions.
 - Eslint
 
 Future integrations:
+
 - A pricing page connected to Stripe
 - A landing page
 - Admin pages
@@ -25,6 +27,7 @@ Future integrations:
 Please send a PR if you have some good features you would like to integrate to ExPlatform.
 
 # Setting up the boilerplate
+
 ## Install asdf
 
 Please install [asdf](https://asdf-vm.com/#/core-manage-asdf) which can install all the tooling required.
@@ -49,6 +52,7 @@ Install all the tools:
 ```
 asdf install
 ```
+
 ## Install pre-commit
 
 https://pre-commit.com/
