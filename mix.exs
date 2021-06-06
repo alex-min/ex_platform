@@ -37,29 +37,42 @@ defmodule ExPlatform.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # Emails
       {:bamboo, "~> 2.0"},
+      {:bamboo_smtp, "~> 4.0.1"},
       {:bamboo_phoenix, "~> 1.0.0"},
+      {:premailex, "~> 0.3.0"},
+
+      # User auth
       {:bcrypt_elixir, "~> 2.0"},
-      {:phx_gen_auth, "~> 0.7", only: [:dev], runtime: false},
+
+      # Phoenix
       {:phoenix, "~> 1.5.9"},
-      {:phoenix_ecto, "~> 4.1"},
-      {:ecto_sql, "~> 3.4"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_live_view, "~> 0.15.1"},
-      {:floki, ">= 0.19.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_dashboard, "~> 0.4"},
-      {:premailex, "~> 0.3.0"},
+      {:plug_cowboy, "~> 2.0"},
+
+      # Ecto
+      {:phoenix_ecto, "~> 4.1"},
+      {:ecto_sql, "~> 3.4"},
+      {:postgrex, ">= 0.0.0"},
+
+      # Utils
+      {:floki, ">= 0.19.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
+
+      # I18n
       {:ex_cldr, "~> 2.0"},
       {:ex_money, "~> 5.5.1"},
       {:ex_cldr_dates_times, "~> 2.6"},
       {:ex_cldr_calendars, "~> 1.12"},
+
+      # Tools
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
