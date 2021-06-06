@@ -45,17 +45,25 @@ config :ex_platform, ExPlatform.Mailer,
 
 config :ex_platform, ExPlatformWeb.Endpoint,
   http: [
+    host:
+      System.get_env("HOSTNAME") ||
+        raise(
+          "environment variable HOSTNAME is missing. (This is the address of your website, like example.org)"
+        ),
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
   secret_key_base: secret_key_base
 
-# ## Using releases (Elixir v1.9+)
-#
-# If you are doing OTP releases, you need to instruct Phoenix
-# to start each relevant endpoint:
-#
-#     config :ex_platform, ExPlatformWeb.Endpoint, server: true
-#
-# Then you can assemble a release by calling `mix release`.
-# See `mix help release` for more information.
+# Configuring sentry (optional)
+if System.get_env("SENTRY_DSN") do
+  config :sentry,
+    dsn: System.get_env("SENTRY_DSN"),
+    environment_name: :prod,
+    enable_source_code_context: true,
+    root_source_code_path: File.cwd!(),
+    tags: %{
+      env: "production"
+    },
+    included_environments: [:prod]
+end
