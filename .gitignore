@@ -40,3 +40,6 @@ priv/plts
 venv
 
 vendor/bundle
+
+# we use yarn
+.package-lock.json
