@@ -15,7 +15,7 @@ What's included out of the box:
 - Dependabot
 - Asdf integration, just use the .tools-versions for all your versions! It's also what's used in the Github actions.
 - Eslint
-- (Deployment with Docker)[docs/deployment.md]
+- [Deployment with Docker](docs/deployment.md)
 
 Future integrations:
 
