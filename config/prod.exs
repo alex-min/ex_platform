@@ -53,4 +53,6 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
+unless System.get_env("SKIP_LOADING_PROD_SECRETS") do
+  import_config "prod.secret.exs"
+end

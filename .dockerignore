@@ -1,0 +1,13 @@
+node_modules/
+_build/
+deps/
+test/
+testjs/
+priv/static/
+
+*.md
+.kodiak.toml
+.github/
+.elixir_ls/
+.pre-commit/
+docs/
