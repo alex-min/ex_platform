@@ -41,7 +41,8 @@ RUN chmod a+x docker-entrypoint.sh
 # Building assets
 ENV NODE_ENV=production
 RUN yarn run webpack --mode=production && rm -rf /var/www/node_modules
-# we skip loading the prod secrets for the phx.digest since they are not available yet
-RUN env SKIP_LOADING_PROD_SECRETS=true mix phx.digest
 
+# we skip loading the prod secrets for the phx.digest & compile since they are not available yet
+RUN env SKIP_LOADING_PROD_SECRETS=true mix phx.digest
+RUN env SKIP_LOADING_PROD_SECRETS=true mix compile
 CMD /www/docker-entrypoint.sh
