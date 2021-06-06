@@ -4,12 +4,14 @@
 # remember to add this file to your .gitignore.
 use Mix.Config
 
-database_url =
-  System.get_env("DATABASE_URL") ||
-    raise """
-    environment variable DATABASE_URL is missing.
-    For example: ecto://USER:PASS@HOST/DATABASE
-    """
+database_url = System.get_env("DATABASE_URL") || System.get_env("POSTGRESQL_ADDON_URI")
+
+unless database_url do
+  raise """
+  environment variable DATABASE_URL or POSTGRESQL_ADDON_URI is missing.
+  For example: ecto://USER:PASS@HOST/DATABASE
+  """
+end
 
 config :ex_platform, ExPlatform.Repo,
   # ssl: true,
@@ -31,6 +33,19 @@ smtp_email_address =
     """
 
 config :ex_platform, ExPlatform.Mailer, smtp_email_address: smtp_email_address
+
+config :ex_platform, ExPlatform.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: System.get_env("SMTP_HOST") || raise("environment variable SMTP_HOST is missing."),
+  hostname:
+    System.get_env("HOSTNAME") ||
+      raise("environment variable HOSTNAME is missing (like example.com)."),
+  port: (System.get_env("SMTP_PORT") || "587") |> String.to_integer(),
+  username:
+    System.get_env("SMTP_USERNAME") || raise("environment variable SMTP_USERNAME is missing."),
+  password:
+    System.get_env("SMTP_PASSWORD") || raise("environment variable SMTP_PASSWORD is missing."),
+  auth: :always
 
 config :ex_platform, ExPlatformWeb.Endpoint,
   http: [
