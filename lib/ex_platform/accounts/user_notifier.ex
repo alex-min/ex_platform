@@ -18,7 +18,8 @@ defmodule ExPlatform.Accounts.UserNotifier do
   defp deliver(email) do
     new_email(
       to: email.to,
-      from: Mailer.smtp_email_address()
+      from: Mailer.smtp_email_address(),
+      subject: email.title
     )
     |> put_layout({ExPlatformWeb.LayoutView, :email_action})
     |> assign(:email, email)

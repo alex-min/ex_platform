@@ -178,7 +178,8 @@ defmodule ExPlatform.AccountsTest do
     test "sends token through notification", %{user: user} do
       token =
         extract_user_token(fn url ->
-          Accounts.deliver_update_email_instructions(user, "current@example.com", url)
+          {:ok, %Bamboo.Email{subject: "Change your email"}} =
+            Accounts.deliver_update_email_instructions(user, "current@example.com", url)
         end)
 
       {:ok, token} = Base.url_decode64(token, padding: false)
