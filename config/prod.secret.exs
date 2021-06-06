@@ -14,8 +14,8 @@ unless database_url do
 end
 
 config :ex_platform, ExPlatform.Repo,
-  # ssl: true,
   url: database_url,
+  maintenance_database: URI.parse(database_url).path |> String.replace("/", ""),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 secret_key_base =
