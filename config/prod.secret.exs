@@ -44,14 +44,16 @@ config :ex_platform, ExPlatform.Mailer,
     System.get_env("SMTP_PASSWORD") || raise("environment variable SMTP_PASSWORD is missing.")
 
 config :ex_platform, ExPlatformWeb.Endpoint,
-  http: [
+  http: [port: String.to_integer(System.get_env("PORT") || "4000")],
+  url: [
     host:
       System.get_env("HOSTNAME") ||
         raise(
           "environment variable HOSTNAME is missing. (This is the address of your website, like example.org)"
         ),
-    port: String.to_integer(System.get_env("PORT") || "4000"),
-    transport_options: [socket_opts: [:inet6]]
+    transport_options: [socket_opts: [:inet6]],
+    scheme: "https",
+    port: 443
   ],
   secret_key_base: secret_key_base
 
