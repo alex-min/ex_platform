@@ -44,7 +44,7 @@
     "jest": "^27.0.4",
     "jest-pnp-resolver": "^1.2.2",
     "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^6.0.0",
+    "node-sass": "^6.0.1",
     "postcss-loader": "^6.1.0",
     "purgecss-webpack-plugin": "^4.0.3",
     "sass-loader": "^12.1.0",
