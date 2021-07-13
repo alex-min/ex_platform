@@ -1926,9 +1926,9 @@ css-declaration-sorter@^6.0.3:
   dependencies:
     timsort "^0.3.0"
 
-css-loader@^5.2.6:
-  version "5.2.6"
-  resolved "https://registry.npmjs.org/css-loader/-/css-loader-5.2.6.tgz"
+css-loader@^5.2.7:
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-5.2.7.tgz#9b9f111edf6fb2be5dc62525644cbc9c232064ae"
   dependencies:
     icss-utils "^5.1.0"
     loader-utils "^2.0.0"
