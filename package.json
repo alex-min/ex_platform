@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-env": "^7.15.4",
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
