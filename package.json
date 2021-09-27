@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "babel-jest": "^27.2.1",
+    "babel-jest": "^27.2.2",
     "phoenix": "file:./deps/phoenix",
     "phoenix_html": "file:./deps/phoenix_html",
     "phoenix_live_view": "file:./deps/phoenix_live_view",
