@@ -47,7 +47,7 @@
     "node-sass": "^6.0.1",
     "postcss-loader": "^6.2.0",
     "purgecss-webpack-plugin": "^4.0.3",
-    "sass-loader": "^12.2.0",
+    "sass-loader": "^12.3.0",
     "tailwindcss": "^2.2.17",
     "terser-webpack-plugin": "^5.2.4",
     "webpack": "^5.60.0",
