@@ -2000,9 +2000,9 @@ css-declaration-sorter@^6.0.3:
   dependencies:
     timsort "^0.3.0"
 
-css-loader@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.4.0.tgz#01c57ea776024e18ca193428dcad3ff6b42a0130"
+css-loader@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.5.0.tgz#9d1cf7766a9a8f0b3c6e1638309b964dbdab46d3"
   dependencies:
     icss-utils "^5.1.0"
     postcss "^8.2.15"
