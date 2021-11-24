@@ -13,7 +13,7 @@
     "phoenix": "file:./deps/phoenix",
     "phoenix_html": "file:./deps/phoenix_html",
     "phoenix_live_view": "file:./deps/phoenix_live_view",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.0",
     "topbar": "^1.0.1"
   },
   "jest": {
