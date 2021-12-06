@@ -39,7 +39,7 @@
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
-    "eslint": "^8.3.0",
+    "eslint": "^8.4.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.3",
     "jest-pnp-resolver": "^1.2.2",
