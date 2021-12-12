@@ -56,5 +56,5 @@ jobs:
         run: yarn
       - name: tests
         run: yarn test
-      - name: webpack compiles fine
-        run: webpack --mode production
+      - name: javascript compiles fine
+        run: mix assets.deploy
