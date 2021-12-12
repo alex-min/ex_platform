@@ -48,6 +48,9 @@ defmodule ExPlatformWeb do
       use Phoenix.LiveView,
         layout: {ExPlatformWeb.LayoutView, "live.html"}
 
+      on_mount {ExPlatformWeb.Hooks.Language, :set_language}
+      on_mount {ExPlatformWeb.Hooks.CurrentUser, :fetch_current_user}
+
       unquote(view_helpers())
     end
   end

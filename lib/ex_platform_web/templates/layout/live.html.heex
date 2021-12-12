@@ -1,3 +1,5 @@
+<%= render "_menu.html", conn: @socket, current_user: assigns[:current_user] %>
+
 <main role="main" class="flex-1 flex flex-col h-full">
   <div class="absolute top-0 right-0 z-20" style="width:700px; max-height: 500px">
     <%= render "_notification.html", text:  live_flash(@flash, :info), type: :info %>

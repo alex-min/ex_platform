@@ -1,9 +1,7 @@
 yarn 1.22.5
-nodejs 14.17.0
+nodejs 17.2.0
 
-elixir 1.12.1-otp-24
-erlang 24.0.1
+elixir 1.13.0
+erlang 24.1.5
 
 python 3.8.5
-
-ruby 2.7.3

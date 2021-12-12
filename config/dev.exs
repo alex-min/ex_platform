@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.LocalAdapter
 config :ex_platform, ExPlatform.Mailer, smtp_email_address: "hello@example.com"
@@ -24,12 +24,14 @@ config :ex_platform, ExPlatformWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
+    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
     node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch",
-      "--watch-options-stdin",
+      "./node_modules/.bin/tailwindcss",
+      "-i",
+      "assets/css/app.scss",
+      "-o",
+      "priv/static/css/app.css",
       cd: Path.expand("../", __DIR__)
     ]
   ]

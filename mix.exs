@@ -47,11 +47,11 @@ defmodule ExPlatform.MixProject do
       {:bcrypt_elixir, "~> 2.0"},
 
       # Phoenix
-      {:phoenix, "~> 1.5.9"},
-      {:phoenix_live_view, "~> 0.15.1"},
-      {:phoenix_html, "~> 2.11"},
+      {:phoenix, "~> 1.6.2"},
+      {:phoenix_live_view, "~> 0.17.5"},
+      {:phoenix_html, "~> 3.1.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_dashboard, "~> 0.4"},
+      {:phoenix_live_dashboard, "~> 0.6.1"},
       {:plug_cowboy, "~> 2.0"},
 
       # Ecto
@@ -74,8 +74,13 @@ defmodule ExPlatform.MixProject do
       {:ex_cldr_calendars, "~> 1.12"},
 
       # Tools
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
+      {:credo, "~> 1.6.1", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+
+      # Admin, Kaffy version in hex.pm is very old so we need to pin it
+      {:kaffy,
+       git: "git@github.com:aesmail/kaffy.git", tag: "418893961c67ec77559f9efd90f58c656f051389"},
+      {:esbuild, "~> 0.3", runtime: Mix.env() == :dev}
     ]
   end
 
@@ -91,7 +96,8 @@ defmodule ExPlatform.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      testjs: ["cmd ./node_modules/.bin/jest --colors"]
+      testjs: ["cmd ./node_modules/.bin/jest --colors"],
+      "assets.deploy": ["esbuild default --minify", "phx.digest"]
     ]
   end
 end

@@ -3,8 +3,7 @@
 module.exports = {
   mode: "jit",
   purge:  [
-    "lib/**/*.html.eex",
-    "lib/**/*.html.leex",
+    "lib/**/*.html.{heex,eex,leex}",
     "lib/**/views/**/*.ex",
     "lib/**/live/**/*.ex",
     "assets/js/**/*.js"

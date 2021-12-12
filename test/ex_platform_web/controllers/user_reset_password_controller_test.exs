@@ -36,7 +36,7 @@ defmodule ExPlatformWeb.UserResetPasswordControllerTest do
         get(conn, Routes.user_reset_password_path(conn, :new))
         |> html_response(200)
 
-      assert response =~ "value=\"#{user.email}\" disabled"
+      assert response =~ "value=\"#{user.email}\""
     end
   end
 
