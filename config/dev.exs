@@ -25,14 +25,9 @@ config :ex_platform, ExPlatformWeb.Endpoint,
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     js: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
-    node: [
-      "node_modules/postcss-cli/index.js",
-      "assets/css/app.scss",
-      "-o",
-      "priv/static/assets/app.css",
-      "--watch",
-      cd: Path.expand("../", __DIR__)
-    ]
+    node:
+      ~w(node_modules/.bin/postcss assets/css/app.scss -o priv/static/assets/app.css" --watch) ++
+        [cd: Path.expand("../", __DIR__)]
   ]
 
 # ## SSL Support
