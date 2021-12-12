@@ -1,8 +1,8 @@
-<div class="relative z-10 bg-indigo-600">
+<div class="relative z-10 bg-indigo-500">
   <div class="container mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
     <div>
       <%= live_patch to: "/" do %>
-        <img class="h-8 w-auto sm:h-10" src="/images/logo.svg" alt={ExPlatform.Application.company_name()}>
+        <img class="h-8 w-auto sm:h-10" src="/images/logo.png" alt={ExPlatform.Application.company_name()}>
       <% end %>
     </div>
     <div class="-mr-2 -my-2 md:hidden">
@@ -20,16 +20,16 @@
       <div class="flex items-center md:ml-12 relative">
         <%= if @current_user do %>
           <%= live_patch @current_user.email, to: Routes.user_settings_path(@conn, :edit),
-                class: "text-base font-medium text-pink-600 hover:text-gray-900" %>
+                class: "text-base font-medium text-white hover:text-gray-900" %>
           <%= link dgettext("auth", "Log out"), to: Routes.user_session_path(@conn, :delete), method: :delete,
-                class: "ml-8 text-base font-medium text-pink-600 hover:text-gray-900" %>
+                class: "ml-8 text-base font-medium text-white hover:text-gray-900" %>
         <% else %>
           <%= live_patch dgettext("auth", "Sign in"), to: Routes.user_session_path(@conn, :new),
-                class: "text-base font-medium text-pink-600 hover:text-gray-900" %>
+                class: "text-base font-medium text-white hover:text-gray-900" %>
           <%= live_patch dgettext("auth", "Sign up"), to: Routes.user_registration_path(@conn, :new),
                 class: "ml-8 inline-flex items-center justify-center px-4 py-2
                         border border-transparent rounded-md shadow-sm text-base font-medium
-                        text-white bg-indigo-600 hover:bg-indigo-700" %>
+                        text-white bg-indigo-500 hover:bg-indigo-700" %>
         <% end %>
       </div>
     </div>

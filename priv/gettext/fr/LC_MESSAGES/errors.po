@@ -110,7 +110,7 @@ msgstr ""
 #, elixir-format
 #: lib/ex_platform/accounts/user.ex:96
 msgid "did not change"
-msgstr ""
+msgstr "n'a pas changé"
 
 #, elixir-format
 #: lib/ex_platform/accounts/user.ex:116

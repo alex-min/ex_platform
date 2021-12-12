@@ -1,5 +1,3 @@
-<%= render "_menu.html", conn: @conn, current_user: assigns[:current_user] %>
-
 <%= render "_notification.html", text:  get_flash(@conn, :info), type: :info, dismiss: false %>
 <%= render "_notification.html", text: get_flash(@conn, :error), type: :error, dismiss: false %>
 <main role="main" class="flex-1 flex flex-col h-full">

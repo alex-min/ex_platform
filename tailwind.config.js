@@ -2,7 +2,7 @@
 
 module.exports = {
   mode: "jit",
-  purge:  [
+  content:  [
     "lib/**/*.html.{heex,eex,leex}",
     "lib/**/views/**/*.ex",
     "lib/**/live/**/*.ex",

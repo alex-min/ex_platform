@@ -25,13 +25,13 @@ config :ex_platform, ExPlatformWeb.Endpoint,
   check_origin: false,
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    js: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
     node: [
-      "./node_modules/.bin/tailwindcss",
-      "-i",
+      "node_modules/postcss-cli/index.js",
       "assets/css/app.scss",
       "-o",
-      "priv/static/css/app.css",
+      "priv/static/assets/app.css",
+      "--watch",
       cd: Path.expand("../", __DIR__)
     ]
   ]
