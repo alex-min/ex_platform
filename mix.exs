@@ -78,8 +78,7 @@ defmodule ExPlatform.MixProject do
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
 
       # Admin, Kaffy version in hex.pm is very old so we need to pin it
-      {:kaffy,
-       git: "git@github.com:aesmail/kaffy.git", tag: "418893961c67ec77559f9efd90f58c656f051389"},
+      {:kaffy, github: "aesmail/kaffy", tag: "418893961c67ec77559f9efd90f58c656f051389"},
       {:esbuild, "~> 0.3", runtime: Mix.env() == :dev}
     ]
   end
