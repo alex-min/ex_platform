@@ -5,6 +5,7 @@ https://alex-min.fr/open-sourcing-my-phoenix-boilerplate/
 What's included out of the box:
 
 - TailwindCSS with Tailwind jit
+- Esbuild & Postcss, no webpack
 - Phoenix auth integrated with nice Tailwind pages and transformed to support i18n
 - i18n everywhere (PRs are welcomed to add more languages)
 - Notifications with a nice animation and auto-clear
@@ -15,6 +16,7 @@ What's included out of the box:
 - Dependabot
 - Asdf integration, just use the .tools-versions for all your versions! It's also what's used in the Github actions.
 - Eslint
+- Kaffy admin (on /admin)
 - [Sentry](docs/sentry.md)
 - [Deployment with Docker](docs/deployment.md)
 
@@ -22,7 +24,6 @@ Future integrations:
 
 - A pricing page connected to Stripe
 - A landing page
-- Admin pages
 - Mobile view
 - ...
 
@@ -45,7 +46,6 @@ then restart bash and install all the plugins:
 asdf plugin-add python
 asdf plugin-add erlang
 asdf plugin-add elixir
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add nodejs
 ```
 

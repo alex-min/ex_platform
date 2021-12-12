@@ -10,6 +10,8 @@ defmodule ExPlatformWeb.UserAuth do
   alias ExPlatform.Accounts
   alias ExPlatformWeb.Router.Helpers, as: Routes
 
+  alias ExPlatform.Accounts.User
+
   # Make the remember me cookie valid for 60 days.
   # If you want bump or reduce this value, also change
   # the token expiry itself in UserToken.
@@ -168,4 +170,24 @@ defmodule ExPlatformWeb.UserAuth do
   defp maybe_store_return_to(conn), do: conn
 
   defp signed_in_path(_conn), do: "/"
+
+  @spec require_admin_user(Plug.Conn.t(), any()) :: Plug.Conn.t()
+  def require_admin_user(conn, _opts) do
+    user = conn.assigns[:current_user]
+
+    if user &&
+         (Enum.member?(User.admin_emails(), user.email) || user.is_admin) do
+      conn
+    else
+      if requested_json?(conn) do
+        conn |> put_status(401) |> json(%{error: "session_expired"}) |> halt()
+      else
+        conn
+        |> put_flash(:error, dgettext("errors", "You must log in to access this page."))
+        |> maybe_store_return_to()
+        |> redirect(to: Routes.user_session_path(conn, :new))
+        |> halt()
+      end
+    end
+  end
 end

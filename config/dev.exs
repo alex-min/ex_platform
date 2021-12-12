@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :ex_platform, ExPlatform.Mailer, adapter: Bamboo.LocalAdapter
 config :ex_platform, ExPlatform.Mailer, smtp_email_address: "hello@example.com"
@@ -16,22 +16,18 @@ config :ex_platform, ExPlatform.Repo,
 # debugging and code reloading.
 #
 # The watchers configuration can be used to run external
-# watchers to your application. For example, we use it
-# with webpack to recompile .js and .css sources.
+# watchers to your application. For example, we use it to recompile .js and .css sources.
 config :ex_platform, ExPlatformWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
   watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch",
-      "--watch-options-stdin",
-      cd: Path.expand("../", __DIR__)
-    ]
+    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
+    js: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    node:
+      ~w(node_modules/.bin/postcss assets/css/app.scss -o priv/static/assets/app.css" --watch) ++
+        [cd: Path.expand("../", __DIR__)]
   ]
 
 # ## SSL Support

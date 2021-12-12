@@ -6,12 +6,17 @@ defmodule ExPlatform.Accounts.User do
   import Ecto.Changeset
   import ExPlatformWeb.Gettext
 
+  @admin_emails ["pelos@pelos.pelos"]
+  @spec admin_emails :: [String.t()]
+  def admin_emails, do: @admin_emails
+
   @derive {Inspect, except: [:password]}
   schema "users" do
     field :email, :string
     field :password, :string, virtual: true
     field :hashed_password, :string
     field :confirmed_at, :naive_datetime
+    field :is_admin, :boolean
 
     timestamps()
   end

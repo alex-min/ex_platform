@@ -2,11 +2,11 @@
   <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <div class="fixed inset-0 transition-opacity" aria-hidden="true">
       <div class="absolute inset-0 bg-gray-500 opacity-75"
-        id="<%= @id %>"
+        id={@id}
         phx-capture-click="close"
         phx-window-keydown="close"
         phx-key="escape"
-        phx-target="#<%= @id %>"
+        phx-target={"##{@id}"}>
         phx-page-loading
       ></div>
     </div>
@@ -29,7 +29,7 @@
           </button>
         </div>
       <% end %>
-      <%= live_component @socket, @component, @opts %>
+      <%= live_component @component, @opts %>
     </div>
   </div>
 </div>

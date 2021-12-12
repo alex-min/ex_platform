@@ -2,6 +2,7 @@ defmodule ExPlatformWeb.UserSettingsController do
   use ExPlatformWeb, :controller
 
   alias ExPlatform.Accounts
+  alias ExPlatform.Accounts.User
   alias ExPlatformWeb.UserAuth
 
   import ExPlatformWeb.Gettext
@@ -13,7 +14,7 @@ defmodule ExPlatformWeb.UserSettingsController do
     render(conn, "edit.html")
   end
 
-  @spec current_user(Plug.Conn.t()) :: %ExPlatform.Accounts.User{}
+  @spec current_user(Plug.Conn.t()) :: User.t()
   defp current_user(conn) do
     conn.assigns.current_user
   end
