@@ -1,4 +1,7 @@
 defmodule ExPlatformWeb.Hooks.Language do
+  @moduledoc """
+  Language hook, sets the current global locale
+  """
   def on_mount(:set_language, _params, %{"locale" => locale}, socket) do
     Gettext.put_locale(ExPlatformWeb.Gettext, locale)
 

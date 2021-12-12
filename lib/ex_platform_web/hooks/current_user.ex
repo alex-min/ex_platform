@@ -1,4 +1,7 @@
 defmodule ExPlatformWeb.Hooks.CurrentUser do
+  @moduledoc """
+   Fetches the current user
+  """
   import Phoenix.LiveView
   alias ExPlatform.Accounts
 

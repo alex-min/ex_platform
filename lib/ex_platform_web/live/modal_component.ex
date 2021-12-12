@@ -1,4 +1,7 @@
 defmodule ExPlatformWeb.ModalComponent do
+  @moduledoc """
+    A component to embed modals
+  """
   use ExPlatformWeb, :live_component
 
   @impl true
