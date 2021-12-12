@@ -7,42 +7,21 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "babel-jest": "^27.4.4",
     "phoenix": "file:./deps/phoenix",
     "phoenix_html": "file:./deps/phoenix_html",
     "phoenix_live_view": "file:./deps/phoenix_live_view",
-    "postcss": "^8.4.4",
-    "postcss-cli": "^9.1.0",
     "topbar": "^1.0.1"
   },
-  "jest": {
-    "roots": [
-      "testjs"
-    ],
-    "testMatch": [
-      "./**/*.test.js"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "transform": {
-      "^.+\\.js?$": "babel-jest"
-    }
-  },
   "devDependencies": {
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.1.0",
     "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "autoprefixer": "^10.4.0",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
     "eslint": "^8.4.1",
-    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.4",
     "jest-pnp-resolver": "^1.2.2",
     "node-sass": "^7.0.0",
-    "postcss-loader": "^6.2.1",
-    "sass-loader": "^12.4.0",
     "tailwindcss": "^3.0.1"
   }
 }

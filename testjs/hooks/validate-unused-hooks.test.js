@@ -6,7 +6,7 @@ import "../../assets/js/app";
 
 describe("Validate unused hook", () => {
   test("all hooks are defined", (cb) => {
-    glob("lib/**/*.html.leex", {}, function (err, files) {
+    glob("lib/**/*.html.{leex,heex}", {}, function (err, files) {
       if (err) {
         return cb(err);
       }
