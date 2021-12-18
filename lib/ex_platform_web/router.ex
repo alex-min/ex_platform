@@ -2,11 +2,13 @@ defmodule ExPlatformWeb.Router do
   use ExPlatformWeb, :router
 
   import ExPlatformWeb.UserAuth
+
   use Kaffy.Routes, scope: "/admin", pipe_through: [:browser, :require_admin_user]
+
   use Routes.Accounts.Logged, pipe_through: [:browser, :require_authenticated_user]
-  use Routes.Accounts.UnloggedActions, pipe_through: [:browser]
   use Routes.Accounts.AuthRoutes, pipe_through: [:browser, :redirect_if_user_is_authenticated]
   use Routes.Accounts.ApiRoutes, scope: "/api", pipe_through: [:api]
+  use Routes.Accounts.UnloggedActions, pipe_through: [:browser]
 
   pipeline :browser do
     plug :accepts, ["html"]
