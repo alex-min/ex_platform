@@ -3,6 +3,8 @@ defmodule ExPlatformWeb.Router do
 
   import ExPlatformWeb.UserAuth
   use Kaffy.Routes, scope: "/admin", pipe_through: [:browser, :require_admin_user]
+  use Routes.Accounts.Logged, pipe_through: [:browser, :require_authenticated_user]
+  use Routes.Accounts.ApiRoutes, scope: "/api", pipe_through: [:api]
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -45,15 +47,6 @@ defmodule ExPlatformWeb.Router do
     get "/users/confirm/:token", UserConfirmationController, :confirm
   end
 
-  scope "/api", ExPlatformWeb, as: :api do
-    pipe_through [:api]
-
-    post "/users/register", UserRegistrationController, :create
-    post "/users/log_in", UserSessionController, :create
-    post "/users/reset_password", UserResetPasswordController, :create
-    get "/users/confirm/:token", UserConfirmationController, :confirm
-  end
-
   # Enables LiveDashboard only for development
   #
   # If you want to use the LiveDashboard in production, you should put
@@ -83,11 +76,11 @@ defmodule ExPlatformWeb.Router do
     post "/users/log_in", UserSessionController, :create
   end
 
-  scope "/", ExPlatformWeb do
-    pipe_through [:browser, :require_authenticated_user]
+  # scope "/", ExPlatformWeb do
+  #   pipe_through [:browser, :require_authenticated_user]
 
-    get "/users/settings", UserSettingsController, :edit
-    put "/users/settings", UserSettingsController, :update
-    get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
-  end
+  #   get "/users/settings", UserSettingsController, :edit
+  #   put "/users/settings", UserSettingsController, :update
+  #   get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+  # end
 end
