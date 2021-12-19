@@ -1,4 +1,8 @@
 defmodule Routes.Accounts.ApiRoutes do
+  @moduledoc """
+  User accounts api routes.
+  Remove this module from router.ex if you don't need api access.
+  """
   defmacro __using__(options \\ []) do
     scoped = Keyword.get(options, :scope, "/api")
     custom_pipes = Keyword.get(options, :pipe_through, [])

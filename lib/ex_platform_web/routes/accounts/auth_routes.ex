@@ -1,4 +1,8 @@
 defmodule Routes.Accounts.AuthRoutes do
+  @moduledoc """
+    Actions to auth & register users.
+    These routes should be public but not available to authenticated users.
+  """
   defmacro __using__(options \\ []) do
     scoped = Keyword.get(options, :scope, "/")
     custom_pipes = Keyword.get(options, :pipe_through, [])

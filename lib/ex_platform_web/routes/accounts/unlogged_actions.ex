@@ -1,4 +1,7 @@
 defmodule Routes.Accounts.UnloggedActions do
+  @moduledoc """
+    Actions for users which aren't behind authentication
+  """
   defmacro __using__(options \\ []) do
     scoped = Keyword.get(options, :scope, "/")
     custom_pipes = Keyword.get(options, :pipe_through, [])
