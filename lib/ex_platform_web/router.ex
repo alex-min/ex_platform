@@ -2,7 +2,14 @@ defmodule ExPlatformWeb.Router do
   use ExPlatformWeb, :router
 
   import ExPlatformWeb.UserAuth
+
   use Kaffy.Routes, scope: "/admin", pipe_through: [:browser, :require_admin_user]
+
+  use Routes.Accounts.LoggedActions, pipe_through: [:browser, :require_authenticated_user]
+  use Routes.Accounts.AuthRoutes, pipe_through: [:browser, :redirect_if_user_is_authenticated]
+  use Routes.Accounts.UnloggedActions, pipe_through: [:browser]
+
+  use Routes.Accounts.ApiRoutes, scope: "/api", pipe_through: [:api]
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -33,25 +40,6 @@ defmodule ExPlatformWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
-
-    get "/users/reset_password", UserResetPasswordController, :new
-    post "/users/reset_password", UserResetPasswordController, :create
-    get "/users/reset_password/:token", UserResetPasswordController, :edit
-    put "/users/reset_password/:token", UserResetPasswordController, :update
-
-    delete "/users/log_out", UserSessionController, :delete
-    get "/users/confirm", UserConfirmationController, :new
-    post "/users/confirm", UserConfirmationController, :create
-    get "/users/confirm/:token", UserConfirmationController, :confirm
-  end
-
-  scope "/api", ExPlatformWeb, as: :api do
-    pipe_through [:api]
-
-    post "/users/register", UserRegistrationController, :create
-    post "/users/log_in", UserSessionController, :create
-    post "/users/reset_password", UserResetPasswordController, :create
-    get "/users/confirm/:token", UserConfirmationController, :confirm
   end
 
   # Enables LiveDashboard only for development
@@ -70,24 +58,5 @@ defmodule ExPlatformWeb.Router do
       pipe_through :browser
       live_dashboard "/dashboard", metrics: ExPlatformWeb.Telemetry
     end
-  end
-
-  ## Authentication routes
-
-  scope "/", ExPlatformWeb do
-    pipe_through [:browser, :redirect_if_user_is_authenticated]
-
-    get "/users/register", UserRegistrationController, :new
-    post "/users/register", UserRegistrationController, :create
-    live "/users/log_in", UserSessionLive, :new
-    post "/users/log_in", UserSessionController, :create
-  end
-
-  scope "/", ExPlatformWeb do
-    pipe_through [:browser, :require_authenticated_user]
-
-    get "/users/settings", UserSettingsController, :edit
-    put "/users/settings", UserSettingsController, :update
-    get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
   end
 end
