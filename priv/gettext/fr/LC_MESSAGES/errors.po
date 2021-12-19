@@ -30,16 +30,16 @@ msgid "has an invalid entry"
 msgstr "à une entrée invalide"
 
 msgid "is reserved"
-msgstr ""
+msgstr "est réservé"
 
 msgid "does not match confirmation"
-msgstr ""
+msgstr "ne correspond pas à la confirmation"
 
 msgid "is still associated with this entry"
-msgstr ""
+msgstr "est toujours associé à cette entrée"
 
 msgid "are still associated with this entry"
-msgstr ""
+msgstr "sont toujours associés à cette entrée"
 
 msgid "should be %{count} character(s)"
 msgid_plural "should be %{count} character(s)"
@@ -53,23 +53,23 @@ msgstr[1] ""
 
 msgid "should be at least %{count} character(s)"
 msgid_plural "should be at least %{count} character(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "doit avoir au moins %{count} caractères"
+msgstr[1] "doit avoir au moins %{count} caractères"
 
 msgid "should have at least %{count} item(s)"
 msgid_plural "should have at least %{count} item(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "doit avoir au moins %{count} objets"
+msgstr[1] "doit avoir au moins %{count} objets"
 
 msgid "should be at most %{count} character(s)"
 msgid_plural "should be at most %{count} character(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "doit avoir au moins %{count} caractères"
+msgstr[1] "doit avoir au moins %{count} caractères"
 
 msgid "should have at most %{count} item(s)"
 msgid_plural "should have at most %{count} item(s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "doit avoir au moins %{count} objets"
+msgstr[1] "doit avoir au moins %{count} objets"
 
 msgid "must be less than %{number}"
 msgstr ""
@@ -94,18 +94,18 @@ msgstr ""
 #, elixir-format
 #: lib/ex_platform_web/controllers/user_session_controller.ex:23
 msgid "Invalid email or password"
-msgstr ""
+msgstr "Courriel ou mot de passe invalide"
 
 #, elixir-format
 #: lib/ex_platform_web/templates/user_registration/new.html.eex:15
 #: lib/ex_platform_web/templates/user_reset_password/edit.html.eex:6 lib/ex_platform_web/templates/user_settings/edit.html.eex:7
 msgid "Oops, something went wrong! Please check the errors below."
-msgstr ""
+msgstr "Oups, un problème est survenu ! Veuillez regarder les erreurs ci-dessous."
 
 #, elixir-format
 #: lib/ex_platform_web/controllers/user_auth.ex:156
 msgid "You must log in to access this page."
-msgstr ""
+msgstr "Vous devez être connecté pour acceder à cette page"
 
 #, elixir-format
 #: lib/ex_platform/accounts/user.ex:96
@@ -115,9 +115,9 @@ msgstr "n'a pas changé"
 #, elixir-format
 #: lib/ex_platform/accounts/user.ex:116
 msgid "does not match password"
-msgstr ""
+msgstr "ne correspond pas au mot de passe"
 
 #, elixir-format
 #: lib/ex_platform/accounts/user.ex:152
 msgid "is not valid"
-msgstr ""
+msgstr "n'est pas valide"
