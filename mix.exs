@@ -44,7 +44,7 @@ defmodule ExPlatform.MixProject do
       {:premailex, "~> 0.3.0"},
 
       # User auth
-      {:bcrypt_elixir, "~> 2.0"},
+      {:bcrypt_elixir, "~> 3.0"},
 
       # Phoenix
       {:phoenix, "~> 1.6.2"},
