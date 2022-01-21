@@ -16,7 +16,7 @@
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "@babel/core": "^7.16.10",
-    "@babel/preset-env": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.7.0",
     "jest": "^27.4.7",
