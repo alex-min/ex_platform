@@ -18,7 +18,7 @@
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.5",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "jest": "^28.0.1",
     "jest-pnp-resolver": "^1.2.2",
     "node-sass": "^7.0.1",
