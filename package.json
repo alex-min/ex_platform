@@ -15,7 +15,7 @@
   "devDependencies": {
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.10",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.15.0",
