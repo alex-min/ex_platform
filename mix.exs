@@ -39,7 +39,7 @@ defmodule ExPlatform.MixProject do
     [
       # Emails
       {:bamboo, "~> 2.0"},
-      {:bamboo_smtp, "~> 4.1.0"},
+      {:bamboo_smtp, "~> 4.2.1"},
       {:bamboo_phoenix, "~> 1.0.0"},
       {:premailex, "~> 0.3.0"},
 
