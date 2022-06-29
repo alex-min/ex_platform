@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.18.2",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.18.0",
-    "jest": "^28.1.1",
+    "jest": "^28.1.2",
     "jest-pnp-resolver": "^1.2.2",
     "node-sass": "^7.0.1",
     "tailwindcss": "^3.1.4"
