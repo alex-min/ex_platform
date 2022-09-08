@@ -21,7 +21,7 @@
     "eslint": "^8.23.0",
     "jest": "^29.0.2",
     "jest-pnp-resolver": "^1.2.2",
-    "node-sass": "^7.0.1",
+    "node-sass": "^7.0.3",
     "tailwindcss": "^3.1.8"
   }
 }
