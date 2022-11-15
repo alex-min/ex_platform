@@ -2977,9 +2977,10 @@ jest-mock@^29.3.1:
     "@types/node" "*"
     jest-util "^29.3.1"
 
-jest-pnp-resolver@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz"
+jest-pnp-resolver@^1.2.2, jest-pnp-resolver@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.3.tgz#930b1546164d4ad5937d5540e711d4d38d4cad2e"
+  integrity sha512-+3NpwQEnRoIBtx4fyhblQDPgJI0H1IEIkX7ShLUjPGA7TtUTvI1oiKi3SR4oBR0hQhQR80l4WAe5RrXBwWMA8w==
 
 jest-regex-util@^29.2.0:
   version "29.2.0"
