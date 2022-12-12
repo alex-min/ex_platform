@@ -13,7 +13,7 @@
     "topbar": "^1.0.1"
   },
   "devDependencies": {
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
