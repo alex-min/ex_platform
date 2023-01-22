@@ -1,7 +1,7 @@
-yarn 1.22.5
-nodejs 17.2.0
+yarn 1.22.19
+nodejs lts
 
-elixir 1.13.0
-erlang 24.1.5
+elixir 1.14.3
+erlang 25.2.1
 
 python 3.8.5
