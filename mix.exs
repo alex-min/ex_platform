@@ -7,7 +7,7 @@ defmodule ExPlatform.MixProject do
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -68,7 +68,8 @@ defmodule ExPlatform.MixProject do
       {:sentry, "~> 8.0"},
 
       # I18n
-      {:ex_cldr, "~> 2.0"},
+      {:ex_cldr, "~> 2.33"},
+      {:ex_cldr_plugs, "~> 1.2"},
       {:ex_money, "~> 5.12.0"},
       {:ex_cldr_dates_times, "~> 2.6"},
       {:ex_cldr_calendars, "~> 1.12"},
