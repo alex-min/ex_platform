@@ -47,7 +47,7 @@ defmodule ExPlatform.MixProject do
       {:bcrypt_elixir, "~> 3.0"},
 
       # Phoenix
-      {:phoenix, "~> 1.6.2"},
+      {:phoenix, "~> 1.7.0"},
       {:phoenix_live_view, "~> 0.17.5"},
       {:phoenix_html, "~> 3.3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
