@@ -74,7 +74,7 @@ defmodule ExPlatform.MixProject do
       {:ex_cldr_calendars, "~> 1.12"},
 
       # Tools
-      {:credo, "~> 1.6.1", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.7.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
 
       # Admin, Kaffy version in hex.pm is very old so we need to pin it
