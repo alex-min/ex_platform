@@ -65,7 +65,7 @@ defmodule ExPlatform.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:sentry, "~> 8.0"},
+      {:sentry, "~> 9.0"},
 
       # I18n
       {:ex_cldr, "~> 2.0"},
