@@ -4261,10 +4261,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwindcss@^4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.4.tgz#27b3c910c6f1a47f4540451f3faf7cdd6d977a69"
-  integrity sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==
+tailwindcss@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.5.tgz#d35607f1a351051bd29cda7e59ab2c222ca8deb6"
+  integrity sha512-nYtSPfWGDiWgCkwQG/m+aX83XCwf62sBgg3bIlNiiOcggnS1x3uVRDAuyelBFL+vJdOPPCGElxv9DjHJjRHiVA==
 
 tar@^6.0.2, tar@^6.1.11, tar@^6.1.2:
   version "6.2.1"
