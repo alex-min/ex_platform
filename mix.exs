@@ -63,7 +63,7 @@ defmodule ExPlatform.MixProject do
       {:floki, ">= 0.19.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
-      {:gettext, "~> 0.11"},
+      {:gettext, "~> 1.0"},
       {:jason, "~> 1.0"},
       {:sentry, "~> 10.0"},
 
