@@ -4620,10 +4620,10 @@ synckit@^0.11.8:
   dependencies:
     "@pkgr/core" "^0.2.4"
 
-tailwindcss@^4.1.16:
-  version "4.1.16"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.16.tgz#c32179f98725eb551e5c1189813a3db437ad5a7f"
-  integrity sha512-pONL5awpaQX4LN5eiv7moSiSPd/DLDzKVRJz8Q9PgzmAdd1R4307GQS2ZpfiN7ZmekdQrfhZZiSE5jkLR4WNaA==
+tailwindcss@^4.1.17:
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.1.17.tgz#e6dcb7a9c60cef7522169b5f207ffec2fd652286"
+  integrity sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==
 
 tar@^6.0.2, tar@^6.1.11, tar@^6.1.2:
   version "6.2.1"
