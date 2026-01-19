@@ -69,7 +69,7 @@ defmodule ExPlatform.MixProject do
 
       # I18n
       {:ex_cldr, "~> 2.0"},
-      {:ex_money, "~> 5.23.0"},
+      {:ex_money, "~> 5.24.0"},
       {:ex_cldr_dates_times, "~> 2.6"},
       {:ex_cldr_calendars, "~> 2.0"},
 
