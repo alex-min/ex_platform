@@ -41,7 +41,7 @@ defmodule ExPlatform.MixProject do
       {:bamboo, "~> 2.0"},
       {:bamboo_smtp, "~> 4.2.1"},
       {:bamboo_phoenix, "~> 1.0.0"},
-      {:premailex, "~> 0.3.0"},
+      {:premailex, "~> 1.0.0"},
 
       # User auth
       {:bcrypt_elixir, "~> 3.0"},
